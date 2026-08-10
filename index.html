@@ -888,65 +888,63 @@
 
 
         <!-- 3. QUÁ TRÌNH HÌNH THÀNH -->
-        <div class="fobo-process">
+        <div class="process-flow">
 
-            <div class="sub-heading">
-                <span>QUÁ TRÌNH HÌNH THÀNH</span>
-                <h3>Từ nhiều lựa chọn đến FOBO</h3>
-            </div>
+    <div class="process-item">
+        <div class="process-number">01</div>
+        <h4>Nhiều lựa chọn</h4>
+        <p>
+            Nhiều ngành học,<br>
+            trường và nghề nghiệp.
+        </p>
+    </div>
 
-            <div class="process-flow">
+    <div class="process-connector">→</div>
 
-                <div class="process-item">
-                    <div class="process-number">01</div>
-                    <h4>Nhiều lựa chọn</h4>
-                    <p>
-                        Nhiều ngành học,<br>
-                        trường và nghề nghiệp.
-                    </p>
-                </div>
+    <div class="process-item">
+        <div class="process-number">02</div>
+        <h4>Nhiều thông tin</h4>
+        <p>
+            Liên tục tìm kiếm<br>
+            và tiếp nhận thông tin.
+        </p>
+    </div>
 
-                <div class="process-connector">→</div>
+    <div class="process-connector">→</div>
 
-                <div class="process-item">
-                    <div class="process-number">02</div>
-                    <h4>Nhiều thông tin</h4>
-                    <p>
-                        Liên tục tìm kiếm<br>
-                        và tiếp nhận thông tin.
-                    </p>
-                </div>
+    <div class="process-item">
+        <div class="process-number">03</div>
+        <h4>So sánh</h4>
+        <p>
+            Cân nhắc nhiều phương án<br>
+            và tiêu chí khác nhau.
+        </p>
+    </div>
 
-                <div class="process-connector">→</div>
+    <div class="process-connector">→</div>
 
-                <div class="process-item">
-                    <div class="process-number">03</div>
-                    <h4>So sánh</h4>
-                    <p>
-                        Cân nhắc nhiều phương án<br>
-                        và tiêu chí khác nhau.
-                    </p>
-                </div>
+    <div class="process-item fobo-result">
+        <div class="process-number">04</div>
+        <h4>FOBO</h4>
+        <p>
+            Lo rằng vẫn còn<br>
+            lựa chọn tốt hơn.
+        </p>
+    </div>
 
-                <div class="process-connector">→</div>
+    <div class="process-connector">→</div>
 
-                <div class="process-item fobo-result">
-                    <div class="process-number">04</div>
-                    <h4>FOBO</h4>
-                    <p>
-                        Lo rằng vẫn còn<br>
-                        lựa chọn tốt hơn.
-                    </p>
-                </div>
+    <div class="process-item process-final">
+        <div class="process-number">05</div>
+        <h4>Khó cam kết</h4>
+        <p>
+            Do dự · trì hoãn<br>
+            · nghi ngờ
+        </p>
+    </div>
 
-            </div>
+</div>
 
-            <div class="process-bottom">
-                <span>↓</span>
-                <strong>Do dự · trì hoãn · khó cam kết</strong>
-            </div>
-
-        </div>
 
 
         <!-- 4. BIỂU HIỆN -->
@@ -1460,20 +1458,22 @@
     color: #dbe1ed;
 }
 
-.process-bottom {
-    text-align: center;
-    margin-top: 22px;
-    color: #4d5d7e;
+.process-item.process-final {
+    background: #eef1f7;
+    border: 1px solid #cbd3e2;
 }
 
-.process-bottom span {
-    display: block;
-    font-size: 22px;
-    margin-bottom: 5px;
+.process-final .process-number {
+    background: #cbd3e2;
+    color: #34466f;
 }
 
-.process-bottom strong {
-    font-size: 15px;
+.process-final h4 {
+    color: #34466f;
+}
+
+.process-final p {
+    color: #68748a;
 }
 
 
