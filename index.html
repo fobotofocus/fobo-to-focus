@@ -1190,440 +1190,551 @@
 </section>
 
 
-<!-- =========================================================
-     CSS CHO MỤC FOBO
-========================================================= -->
+/* =====================================================
+   FOBO LÀ GÌ?
+   ===================================================== */
 
-<style>
+#fobo {
+    background: #f7f9fc;
+}
 
 .fobo-section {
-    background: #f7f9fc;
-    color: #243044;
-    padding: 100px 25px;
+    max-width: 1150px;
+    margin: 0 auto;
 }
-
-.fobo-container {
-    max-width: 1100px;
-    margin: auto;
-}
-
 
 /* ===== TIÊU ĐỀ ===== */
 
-.fobo-section .section-title {
+.fobo-heading {
     text-align: center;
-    margin-bottom: 65px;
+    margin-bottom: 55px;
 }
 
-.section-label,
-.sub-heading > span,
-.small-title {
-    color: #64739a;
-    font-size: 12px;
-    font-weight: 800;
+.fobo-label {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
     letter-spacing: 2px;
+    color: #5b6f96;
+    margin-bottom: 12px;
 }
 
-.fobo-section .section-title h2 {
-    color: #263c93;
+.fobo-heading h2 {
     font-size: 42px;
-    margin: 10px 0;
+    line-height: 1.2;
+    color: #263c64;
+    margin-bottom: 15px;
 }
 
-.fobo-section .section-title p {
-    color: #69758a;
+.fobo-heading p {
+    max-width: 720px;
+    margin: auto;
+    color: #69778e;
     font-size: 16px;
 }
-/* ===== KHÁI NIỆM ===== */
 
-.fobo-intro {
+
+/* =====================================================
+   1. KHÁI NIỆM
+   ===================================================== */
+
+.fobo-concept {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    background: #ffffff;
+    grid-template-columns: minmax(0, 1.7fr) minmax(300px, 0.9fr);
+    gap: 28px;
+    margin-bottom: 30px;
+    align-items: stretch;
+}
+
+.fobo-concept-main {
+    background: #eef3fb;
     border-radius: 22px;
-    overflow: hidden;
-    box-shadow: 0 10px 35px rgba(30, 50, 100, 0.06);
-    margin-bottom: 35px;
+    padding: 42px;
 }
 
-.fobo-intro-main {
-    padding: 45px;
-    background: #eef2fb;
+.fobo-concept-main .eyebrow {
+    color: #60769d;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
 }
 
-.fobo-intro-main h3 {
-    color: #263c93;
-    font-size: 30px;
-    line-height: 1.3;
-    margin: 12px 0 20px;
+.fobo-concept-main h3 {
+    color: #2d4a91;
+    font-size: 34px;
+    line-height: 1.2;
+    margin-bottom: 22px;
 }
 
-.fobo-intro-main p {
-    color: #596579;
-}
-.fobo-definition {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    padding: 40px;
-}
-.fobo-definition p {
-    color: #52617a;
-    font-size: 16px;
-}
-.definition-line {
-    width: 4px;
-    min-width: 4px;
-    height: 80px;
-    background: #52658f;
-    border-radius: 5px;
+.fobo-concept-main > p {
+    color: #53637d;
+    font-size: 17px;
+    line-height: 1.8;
 }
 
 
-/* ===== NOTE ===== */
+/* ===== LƯU Ý QUAN TRỌNG ===== */
 
 .fobo-note {
-    background: #e9edf6;
-    border-radius: 20px;
-    padding: 32px;
-    margin-bottom: 75px;
+    margin-top: 28px;
+    padding: 22px 25px;
+    background: #e4eaf5;
+    border-left: 4px solid #526b9b;
+    border-radius: 12px;
+    color: #30405d;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
-.note-title {
+.fobo-note strong {
+    color: #293e69;
+}
+
+
+/* =====================================================
+   NHIỀU LỰA CHỌN ≠ FOBO
+   ===================================================== */
+
+.fobo-comparison {
+    background: #e8edf6;
+    border-radius: 22px;
+    padding: 35px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fobo-comparison h4 {
     text-align: center;
-    color: #344466;
-    font-weight: 700;
+    color: #30466f;
+    font-size: 18px;
+    line-height: 1.5;
     margin-bottom: 25px;
-}
-
-/* ===== FIX SƠ ĐỒ NHIỀU LỰA CHỌN ≠ FOBO ===== */
-
-.comparison-panel {
-    width: 100%;
-    padding: 35px 30px;
 }
 
 .comparison-items {
     display: grid;
-    grid-template-columns: 1fr 40px 1fr;
+    grid-template-columns: minmax(0, 1fr) 38px minmax(0, 1fr);
+    gap: 10px;
     align-items: stretch;
-    gap: 12px;
     width: 100%;
 }
 
 .comparison-card {
     min-width: 0;
     width: 100%;
-    padding: 25px 18px;
-    border-radius: 16px;
+    padding: 22px 16px;
+    border-radius: 15px;
+    background: white;
     text-align: center;
+}
+
+.comparison-card.fobo-card {
+    background: #344b7c;
+    color: white;
+}
+
+.comparison-number {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    opacity: 0.75;
+}
+
+.comparison-card h5 {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    color: #30466f;
+}
+
+.comparison-card.fobo-card h5 {
+    color: white;
+}
+
+.comparison-card p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #68768c;
+    margin: 0;
     word-break: normal;
     overflow-wrap: break-word;
 }
 
-.comparison-card h4 {
-    font-size: 19px;
-    line-height: 1.4;
-    margin-bottom: 12px;
-}
-
-.comparison-card p {
-    font-size: 15px;
-    line-height: 1.7;
-    word-break: normal;
+.comparison-card.fobo-card p {
+    color: #e3e9f4;
 }
 
 .comparison-symbol {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 26px;
-    color: #65789d;
-}
-
-/* ===== SUB HEADING ===== */
-
-.sub-heading {
-    margin-bottom: 35px;
-}
-
-.sub-heading h3 {
-    color: #263c93;
-    font-size: 30px;
-    margin-top: 7px;
+    color: #637493;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 
-/* ===== PROCESS ===== */
+/* =====================================================
+   DÒNG NHẤN MẠNH
+   ===================================================== */
+
+.fobo-highlight {
+    margin: 30px 0 65px;
+    padding: 20px 25px;
+    border-left: 4px solid #536b98;
+    color: #53637c;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.fobo-highlight strong {
+    color: #30466f;
+}
+
+
+/* =====================================================
+   CÁC SECTION BÊN TRONG
+   ===================================================== */
+
+.fobo-block {
+    margin-bottom: 65px;
+}
+
+.fobo-block-title {
+    margin-bottom: 25px;
+}
+
+.fobo-block-title span {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #70809a;
+    margin-bottom: 7px;
+}
+
+.fobo-block-title h3 {
+    font-size: 28px;
+    color: #2d446d;
+    line-height: 1.3;
+}
+
+.fobo-block-text {
+    color: #5d6b81;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   NGUỒN GỐC
+   ===================================================== */
+
+.origin-box {
+    background: white;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 8px 28px rgba(35, 55, 90, 0.05);
+    margin-bottom: 25px;
+}
+
+.origin-box p {
+    color: #5d6b81;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.origin-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   SƠ ĐỒ HÌNH THÀNH FOBO
+   ===================================================== */
 
 .fobo-process {
-    margin-bottom: 80px;
+    background: #eef3fa;
+    border-radius: 22px;
+    padding: 35px;
+    margin-top: 28px;
+}
+
+.fobo-process-title {
+    text-align: center;
+    color: #334a73;
+    font-size: 18px;
+    margin-bottom: 25px;
 }
 
 .process-flow {
     display: flex;
-    align-items: stretch;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
-.process-item {
-    flex: 1;
+.process-box {
+    width: min(100%, 520px);
+    padding: 15px 22px;
+    border-radius: 12px;
     background: white;
-    border: 1px solid #e2e7f0;
-    border-radius: 16px;
-    padding: 25px 18px;
     text-align: center;
+    color: #435574;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(40, 60, 100, 0.05);
 }
 
-.process-number {
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    margin: 0 auto 15px;
-    border-radius: 50%;
-    background: #dce3f2;
-    color: #3e527e;
-    font-size: 12px;
-    font-weight: 800;
+.process-box.highlight {
+    background: #344b7c;
+    color: white;
 }
 
-.process-item h4 {
-    color: #34466f;
-    margin-bottom: 8px;
-}
-
-.process-item p {
-    color: #718096;
-    font-size: 13px;
-}
-
-.process-connector {
-    align-self: center;
-    color: #7885a2;
+.process-arrow {
+    color: #647795;
     font-size: 20px;
-}
-
-.process-item.fobo-result {
-    background: #33456f;
-    border-color: #33456f;
-}
-
-.fobo-result .process-number {
-    background: #69799e;
-    color: white;
-}
-
-.fobo-result h4 {
-    color: white;
-}
-
-.fobo-result p {
-    color: #dbe1ed;
-}
-
-.process-bottom {
-    text-align: center;
-    margin-top: 22px;
-    color: #4d5d7e;
-}
-
-.process-bottom span {
-    display: block;
-    font-size: 22px;
-    margin-bottom: 5px;
-}
-
-.process-bottom strong {
-    font-size: 15px;
+    line-height: 1;
 }
 
 
-/* ===== BIỂU HIỆN ===== */
+/* =====================================================
+   BIỂU HIỆN FOBO
+   ===================================================== */
 
 .fobo-signs {
-    margin-bottom: 80px;
-}
-
-.sign-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 18px;
 }
 
-.sign-card {
+.fobo-sign {
     background: white;
-    border-radius: 16px;
+    border: 1px solid #e4e9f1;
+    border-radius: 17px;
     padding: 25px;
-    border: 1px solid #e3e8f0;
-    transition: 0.25s;
 }
 
-.sign-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(30, 50, 100, 0.07);
-}
-
-.sign-number {
-    font-size: 11px;
-    color: #7a87a4;
-    font-weight: 800;
+.fobo-sign-number {
+    color: #71809a;
+    font-size: 12px;
+    font-weight: 700;
     letter-spacing: 1px;
+    margin-bottom: 8px;
 }
 
-.sign-card h4 {
-    color: #34466f;
-    margin: 10px 0 8px;
+.fobo-sign h4 {
+    color: #334b75;
+    font-size: 18px;
+    margin-bottom: 9px;
 }
 
-.sign-card p {
-    color: #68748a;
-    font-size: 14px;
+.fobo-sign p {
+    color: #68758a;
+    font-size: 15px;
+    line-height: 1.7;
 }
 
 
-/* ===== ANALYSIS PARALYSIS ===== */
+/* =====================================================
+   ANALYSIS PARALYSIS
+   ===================================================== */
 
 .analysis-box {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    background: #33456f;
-    border-radius: 22px;
-    padding: 45px;
-    margin-bottom: 80px;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 25px;
+    align-items: stretch;
 }
 
-.analysis-content h3 {
+.analysis-term {
+    background: #344b7c;
+    border-radius: 20px;
+    padding: 35px;
     color: white;
-    font-size: 27px;
-    line-height: 1.35;
-    margin: 12px 0 18px;
-}
-
-.analysis-content p {
-    color: #dce2ee;
-    font-size: 15px;
-}
-
-.analysis-content .small-title {
-    color: #b8c3da;
-}
-
-.analysis-example {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
 }
 
-.example-step {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #45577f;
-    padding: 14px 17px;
-    border-radius: 10px;
-    color: #f2f4f8;
+.analysis-term span {
     font-size: 13px;
+    letter-spacing: 1.5px;
+    opacity: 0.75;
+    margin-bottom: 12px;
 }
 
-.example-step span {
-    color: #c5cee0;
+.analysis-term h3 {
+    font-size: 27px;
+    line-height: 1.3;
 }
 
-.example-step.final {
-    background: #eef1f7;
-    color: #33456f;
+.analysis-description {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 6px 24px rgba(35, 55, 90, 0.04);
+}
+
+.analysis-description p {
+    color: #5d6b81;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.analysis-example {
+    background: #eef3f9;
+    border-radius: 13px;
+    padding: 18px 20px;
+    color: #53637c;
+    line-height: 1.7;
+}
+
+.analysis-example strong {
+    color: #334a73;
 }
 
 
-/* ===== HỌC SINH ===== */
+/* =====================================================
+   FOBO TRONG LỰA CHỌN NGHỀ
+   ===================================================== */
 
-.fobo-student {
-    margin-bottom: 80px;
+.career-box {
+    background: #eef3fa;
+    border-radius: 22px;
+    padding: 38px;
 }
 
-.student-intro {
-    max-width: 900px;
-    color: #596579;
-    margin-bottom: 35px;
+.career-box p {
+    color: #5d6b81;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
 }
 
-.student-flow {
+.career-flow {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 13px;
+    gap: 9px;
+    margin-top: 28px;
 }
 
-.student-flow > div {
+.career-step {
     background: white;
-    border: 1px solid #e0e5ee;
-    border-radius: 14px;
-    padding: 20px;
-    text-align: center;
-    min-width: 150px;
+    color: #405474;
+    padding: 11px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
-.student-flow strong {
-    display: block;
-    color: #34466f;
-    margin-bottom: 5px;
-}
-
-.student-flow span:not(.flow-arrow) {
-    color: #748096;
-    font-size: 12px;
-}
-
-.flow-arrow {
-    color: #75819c;
-    font-size: 20px;
-}
-
-.student-flow .student-final {
-    background: #33456f;
-    border-color: #33456f;
-}
-
-.student-final strong {
-    color: white;
-}
-
-.student-final span {
-    color: #d9dfeb !important;
+.career-arrow {
+    color: #71809a;
 }
 
 
-/* ===== YẾU TỐ ===== */
-
-.fobo-factors {
-    margin-bottom: 75px;
-}
+/* =====================================================
+   YẾU TỐ LIÊN QUAN
+   ===================================================== */
 
 .factor-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 17px;
 }
 
 .factor {
-    padding: 24px;
-    background: #edf0f6;
+    background: white;
     border-radius: 15px;
+    padding: 22px;
+    border: 1px solid #e5eaf1;
 }
 
 .factor h4 {
-    color: #3a4d77;
+    color: #344b75;
+    font-size: 17px;
     margin-bottom: 7px;
 }
 
 .factor p {
-    color: #68748a;
+    color: #69768a;
     font-size: 14px;
+    line-height: 1.65;
 }
 
 
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .fobo-concept {
+        grid-template-columns: 1fr;
+    }
+
+    .analysis-box {
+        grid-template-columns: 1fr;
+    }
+
+    .factor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fobo-final-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .fobo-heading h2 {
+        font-size: 32px;
+    }
+
+    .fobo-concept-main {
+        padding: 28px;
+    }
+
+    .fobo-concept-main h3 {
+        font-size: 27px;
+    }
+
+    .comparison-items {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-symbol {
+        height: 25px;
+    }
+
+    .fobo-signs {
+        grid-template-columns: 1fr;
+    }
+
+    .factor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fobo-process {
+        padding: 22px 15px;
+    }
+
+    .career-flow {
+        flex-direction: column;
+    }
+
+    .career-arrow {
+        transform: rotate(90deg);
+    }
+}
 /* ===== KẾT LUẬN ===== */
 
 .fobo-conclusion {
