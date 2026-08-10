@@ -2,558 +2,791 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>FOBO to Focus</title>
+    <title>FOBO TO FOCUS | Nghiên cứu khoa học</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #f7f8fc;
-            color: #202124;
-            line-height: 1.6;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #243044;
+            background: #f7f9fc;
+            line-height: 1.7;
         }
 
-        /* THANH ĐIỀU HƯỚNG */
+        /* ===== THANH MENU ===== */
 
         nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e9f0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 16px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            padding: 20px 8%;
-
-            background: white;
-
-            position: sticky;
-            top: 0;
-
-            z-index: 1000;
-
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .logo {
             font-size: 22px;
-            font-weight: bold;
-            color: #5146d8;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
+            font-weight: 800;
+            color: #3157d5;
             text-decoration: none;
-            color: #333;
-            font-size: 15px;
+            letter-spacing: 1px;
         }
 
-        nav a:hover {
-            color: #5146d8;
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
         }
 
+        .nav-links a {
+            text-decoration: none;
+            color: #46536a;
+            font-size: 14px;
+            font-weight: 600;
+        }
 
-        /* PHẦN TRANG CHỦ */
+        .nav-links a:hover {
+            color: #3157d5;
+        }
+
+        /* ===== HERO ===== */
 
         .hero {
-            min-height: 85vh;
-
+            min-height: 100vh;
+            padding: 150px 25px 100px;
             display: flex;
-            flex-direction: column;
-
-            justify-content: center;
             align-items: center;
-
+            justify-content: center;
             text-align: center;
+            background: linear-gradient(135deg, #eef3ff, #ffffff);
+        }
 
-            padding: 60px 20px;
+        .hero-content {
+            max-width: 900px;
+        }
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #eef0ff,
-                    #ffffff
-                );
+        .tag {
+            display: inline-block;
+            padding: 7px 15px;
+            border-radius: 30px;
+            background: #e4eaff;
+            color: #3157d5;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
             font-size: 64px;
-            color: #5146d8;
-
+            line-height: 1.1;
+            color: #263c93;
             margin-bottom: 15px;
+            letter-spacing: 2px;
         }
 
-        .hero h2 {
-            font-size: 26px;
-            font-weight: normal;
-
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            max-width: 650px;
-
-            font-size: 18px;
-
-            color: #555;
-
+        .slogan {
+            font-size: 23px;
+            font-weight: 600;
+            color: #52617a;
             margin-bottom: 30px;
         }
 
+        .hero-description {
+            max-width: 800px;
+            margin: auto;
+            font-size: 17px;
+            color: #596579;
+        }
 
-        /* NÚT */
+        .authors {
+            margin-top: 35px;
+            font-size: 16px;
+            color: #39465c;
+        }
 
-        .buttons {
-            display: flex;
-            gap: 15px;
-
-            flex-wrap: wrap;
-
-            justify-content: center;
+        .authors strong {
+            color: #263c93;
         }
 
         .button {
             display: inline-block;
-
+            margin-top: 35px;
             padding: 13px 25px;
-
             border-radius: 10px;
-
-            text-decoration: none;
-
-            font-weight: bold;
-
-            transition: 0.2s;
-        }
-
-        .primary {
-            background: #5146d8;
+            background: #3157d5;
             color: white;
-        }
-
-        .secondary {
-            background: white;
-            color: #5146d8;
-
-            border: 2px solid #5146d8;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.25s;
         }
 
         .button:hover {
             transform: translateY(-2px);
+            opacity: 0.9;
         }
 
+        /* ===== SECTION ===== */
 
-        /* PHẦN GIỚI THIỆU */
+        section {
+            padding: 90px 25px;
+        }
 
-        .section {
-            max-width: 1000px;
-
+        .container {
+            max-width: 1100px;
             margin: auto;
-
-            padding: 80px 25px;
         }
 
-        .section h2 {
+        .section-title {
             text-align: center;
-
-            font-size: 34px;
-
-            color: #5146d8;
-
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
 
-        .section > p {
-            text-align: center;
-
-            max-width: 750px;
-
-            margin: auto;
-
-            color: #555;
+        .section-title h2 {
+            font-size: 36px;
+            color: #263c93;
+            margin-bottom: 10px;
         }
 
+        .section-title p {
+            color: #69758a;
+        }
 
-        /* CÁC THẺ */
+        /* ===== INTRO ===== */
+
+        .intro-box {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(30, 50, 100, 0.06);
+            margin-bottom: 25px;
+        }
+
+        .intro-box h3 {
+            color: #3157d5;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .intro-box p {
+            color: #596579;
+        }
+
+        /* ===== CARDS ===== */
 
         .cards {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 25px;
-
-            margin-top: 45px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
         }
 
         .card {
             background: white;
-
-            padding: 30px;
-
-            border-radius: 15px;
-
-            box-shadow:
-                0 5px 20px
-                rgba(0,0,0,0.06);
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 7px 25px rgba(30, 50, 100, 0.05);
         }
 
         .card h3 {
-            margin-bottom: 10px;
-
-            color: #333;
+            color: #3157d5;
+            margin-bottom: 12px;
         }
 
         .card p {
-            color: #666;
+            color: #657085;
+            font-size: 15px;
         }
 
+        /* ===== LIST ===== */
 
-        /* CHÂN TRANG */
+        .research-list {
+            padding-left: 22px;
+        }
+
+        .research-list li {
+            margin-bottom: 10px;
+            color: #596579;
+        }
+
+        /* ===== TIMELINE ===== */
+
+        .timeline {
+            border-left: 3px solid #3157d5;
+            padding-left: 25px;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+        }
+
+        .timeline-item h3 {
+            color: #3157d5;
+            margin-bottom: 5px;
+        }
+
+        /* ===== FOOTER ===== */
 
         footer {
+            background: #202b48;
+            color: #dbe1ef;
             text-align: center;
+            padding: 40px 25px;
+        }
 
-            padding: 30px;
-
-            background: #202124;
-
+        footer strong {
             color: white;
         }
 
+        /* ===== RESPONSIVE ===== */
 
-        /* ĐIỆN THOẠI */
+        @media (max-width: 800px) {
 
-        @media (max-width: 700px) {
-
-            nav {
-                flex-direction: column;
-
-                gap: 15px;
-            }
-
-            nav ul {
-                gap: 15px;
-
-                flex-wrap: wrap;
-
-                justify-content: center;
+            .nav-links {
+                display: none;
             }
 
             .hero h1 {
                 font-size: 45px;
             }
 
-            .hero h2 {
-                font-size: 21px;
+            .slogan {
+                font-size: 19px;
             }
 
             .cards {
                 grid-template-columns: 1fr;
             }
-        }
 
+            .intro-box {
+                padding: 25px;
+            }
+        }
     </style>
 </head>
 
-
 <body>
 
+<!-- ===== MENU ===== -->
 
-    <!-- THANH MENU -->
+<nav>
+    <div class="nav-container">
 
-    <nav>
+        <a href="#home" class="logo">FOBO TO FOCUS</a>
 
-        <div class="logo">
-            FOBO to Focus
-        </div>
-
-        <ul>
-
-            <li>
-                <a href="#trang-chu">
-                    Trang chủ
-                </a>
-            </li>
-
-            <li>
-                <a href="#fobo">
-                    FOBO là gì?
-                </a>
-            </li>
-
-            <li>
-                <a href="#nghien-cuu">
-                    Nghiên cứu
-                </a>
-            </li>
-
-            <li>
-                <a href="#danh-gia">
-                    Đánh giá FOBO
-                </a>
-            </li>
-
+        <ul class="nav-links">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#gioi-thieu">Giới thiệu</a></li>
+            <li><a href="#mo-dau">Mở đầu</a></li>
+            <li><a href="#muc-tieu">Mục tiêu</a></li>
+            <li><a href="#phuong-phap">Phương pháp</a></li>
         </ul>
 
-    </nav>
+    </div>
+</nav>
 
 
-    <!-- TRANG CHỦ -->
+<!-- ===== TRANG CHỦ ===== -->
 
-    <section
-        class="hero"
-        id="trang-chu">
+<header class="hero" id="home">
 
-        <h1>
-            FOBO to Focus
-        </h1>
+    <div class="hero-content">
 
-        <h2>
-            Từ nỗi sợ bỏ lỡ đến sự tự tin lựa chọn
-        </h2>
+        <span class="tag">NGHIÊN CỨU KHOA HỌC KỸ THUẬT</span>
 
-        <p>
-            Website nghiên cứu về ảnh hưởng của
-            hiện tượng FOBO đến quyết định lựa chọn
-            nghề nghiệp của học sinh lớp 12.
+        <h1>FOBO TO FOCUS</h1>
+
+        <div class="slogan">
+            Hiểu FOBO – Vững vàng lựa chọn tương lai.
+        </div>
+
+        <p class="hero-description">
+            Nghiên cứu thực trạng và ảnh hưởng của hội chứng FOBO
+            trong lựa chọn ngành nghề của học sinh lớp 12 trên địa bàn
+            xã Tư Nghĩa, đồng thời đề xuất các giải pháp hỗ trợ ra quyết định nghề nghiệp.
         </p>
 
-        <div class="buttons">
+        <div class="authors">
+            Tác giả:
+            <strong>Nguyễn Triều An</strong> ·
+            <strong>Lê Phi Hải</strong>
+        </div>
 
-            <a
-                href="#fobo"
-                class="button primary">
+        <a href="#gioi-thieu" class="button">
+            Khám phá nghiên cứu ↓
+        </a>
 
-                Tìm hiểu về FOBO
+    </div>
 
-            </a>
+</header>
 
-            <a
-                href="#danh-gia"
-                class="button secondary">
 
-                Đánh giá mức độ FOBO
+<!-- ===== GIỚI THIỆU ===== -->
 
-            </a>
+<section id="gioi-thieu">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Giới thiệu đề tài</h2>
+            <p>FOBO và quyết định nghề nghiệp của học sinh lớp 12</p>
+        </div>
+
+        <div class="intro-box">
+
+            <h3>FOBO là gì?</h3>
+
+            <p>
+                FOBO (Fear of Better Options) là nỗi sợ rằng mình có thể
+                bỏ lỡ một lựa chọn tốt hơn. Trong quá trình lựa chọn ngành nghề,
+                FOBO có thể khiến học sinh liên tục tìm kiếm, so sánh các phương án,
+                do dự hoặc trì hoãn việc đưa ra quyết định.
+            </p>
 
         </div>
 
-    </section>
+        <div class="intro-box">
+
+            <h3>Vấn đề nghiên cứu</h3>
+
+            <p>
+                Đối với học sinh lớp 12, việc lựa chọn ngành nghề là một quyết định
+                quan trọng và thường đi kèm với nhiều lựa chọn, nguồn thông tin và
+                kỳ vọng khác nhau. Nghiên cứu tập trung tìm hiểu thực trạng FOBO,
+                những biểu hiện của hiện tượng này và mối liên hệ với quá trình
+                lựa chọn nghề nghiệp của học sinh.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- FOBO LÀ GÌ -->
+<!-- ===== MỞ ĐẦU ===== -->
 
-    <section
-        class="section"
-        id="fobo">
+<section id="mo-dau">
 
-        <h2>
-            FOBO là gì?
-        </h2>
+    <div class="container">
 
-        <p>
-
-            FOBO (Fear of Better Options),
-            hay nỗi sợ bỏ lỡ lựa chọn tốt hơn,
-            là trạng thái tâm lý khiến một người
-            khó đưa ra quyết định vì luôn lo rằng
-            vẫn còn một phương án tốt hơn.
-
-        </p>
+        <div class="section-title">
+            <h2>Mở đầu</h2>
+            <p>Tổng quan về nghiên cứu</p>
+        </div>
 
 
-        <div class="cards">
+        <!-- 1. LÝ DO -->
 
-            <div class="card">
+        <div class="intro-box">
 
-                <h3>
-                    🔍 Luôn tìm kiếm
-                </h3>
+            <h3>1. Lí do chọn đề tài</h3>
 
-                <p>
-                    Không ngừng tìm kiếm những
-                    lựa chọn mới ngay cả khi đã
-                    có một phương án phù hợp.
-                </p>
+            <p>
+                Theo các khảo sát được công bố trong giai đoạn 2023–2026,
+                thực trạng định hướng nghề nghiệp của học sinh, sinh viên
+                Việt Nam vẫn còn nhiều bất cập.
+            </p>
+
+            <br>
+
+            <p>
+                Nhiều học sinh chưa hiểu rõ năng lực, sở thích và giá trị cá nhân
+                của mình; đồng thời chịu ảnh hưởng từ gia đình, bạn bè, mạng xã hội
+                và xu hướng lựa chọn những ngành nghề được xem là "hot".
+            </p>
+
+            <br>
+
+            <p>
+                Trong bối cảnh học sinh phải đứng trước rất nhiều lựa chọn,
+                tâm lý lo sợ bỏ lỡ một phương án tốt hơn có thể xuất hiện.
+                Đây chính là vấn đề mà hiện tượng FOBO (Fear of Better Options)
+                đặt ra trong quá trình lựa chọn nghề nghiệp.
+            </p>
+
+            <br>
+
+            <p>
+                Vì vậy, đề tài tập trung nghiên cứu thực trạng và ảnh hưởng của
+                FOBO trong lựa chọn ngành nghề của học sinh lớp 12 trên địa bàn
+                xã Tư Nghĩa, đồng thời đề xuất các giải pháp hỗ trợ học sinh
+                đưa ra quyết định nghề nghiệp phù hợp.
+            </p>
+
+        </div>
+
+
+        <!-- 2. CÂU HỎI -->
+
+        <div class="intro-box">
+
+            <h3>2. Câu hỏi nghiên cứu</h3>
+
+            <ol class="research-list">
+
+                <li>
+                    Biểu hiện FOBO phổ biến ở học sinh lớp 12 hiện nay là gì?
+                </li>
+
+                <li>
+                    FOBO có mối liên hệ và ảnh hưởng như thế nào đến quá trình
+                    lựa chọn nghề nghiệp của học sinh lớp 12 trên địa bàn xã Tư Nghĩa?
+                </li>
+
+                <li>
+                    Cần có những giải pháp nào để hỗ trợ học sinh khi xuất hiện
+                    xu hướng FOBO trong quá trình lựa chọn nghề nghiệp?
+                </li>
+
+            </ol>
+
+        </div>
+
+
+        <!-- 3. ĐỐI TƯỢNG -->
+
+        <div class="intro-box">
+
+            <h3>3. Đối tượng và khách thể nghiên cứu</h3>
+
+            <p>
+                <strong>Đối tượng nghiên cứu:</strong>
+                Thực trạng và ảnh hưởng của hiện tượng FOBO trong quá trình
+                lựa chọn ngành nghề của học sinh lớp 12, cùng với các yếu tố
+                liên quan và giải pháp hỗ trợ ra quyết định nghề nghiệp.
+            </p>
+
+            <br>
+
+            <p><strong>Khách thể chính:</strong></p>
+
+            <ul class="research-list">
+                <li>Học sinh lớp 12 tại các trường được khảo sát.</li>
+            </ul>
+
+            <p><strong>Khách thể bổ trợ:</strong></p>
+
+            <ul class="research-list">
+                <li>Giáo viên và cán bộ quản lý giáo dục.</li>
+                <li>Phụ huynh học sinh.</li>
+            </ul>
+
+        </div>
+
+
+        <!-- 4. MỤC TIÊU -->
+
+        <div id="muc-tieu" class="intro-box">
+
+            <h3>4. Mục tiêu nghiên cứu</h3>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>🎯 Mục tiêu chung</h3>
+
+                    <p>
+                        Khảo sát và đánh giá thực trạng, ảnh hưởng của FOBO
+                        đến quá trình lựa chọn nghề nghiệp của học sinh lớp 12
+                        tại ba trường THPT trên địa bàn xã Tư Nghĩa;
+                        xác định một số yếu tố liên quan và đề xuất các giải pháp
+                        hỗ trợ học sinh đưa ra quyết định nghề nghiệp phù hợp.
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>📚 Mục tiêu lý luận</h3>
+
+                    <p>
+                        Hệ thống hóa cơ sở lý luận về FOBO và mối liên hệ giữa
+                        FOBO với quá trình lựa chọn nghề nghiệp của học sinh THPT.
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>📊 Mục tiêu thực tiễn</h3>
+
+                    <p>
+                        Khảo sát và đánh giá các biểu hiện của FOBO,
+                        đồng thời phân tích một số yếu tố liên quan đến
+                        quá trình lựa chọn nghề nghiệp của học sinh lớp 12.
+                    </p>
+
+                </div>
 
             </div>
 
+            <br>
 
             <div class="card">
 
-                <h3>
-                    🤔 Khó quyết định
-                </h3>
+                <h3>💡 Mục tiêu về giải pháp</h3>
 
                 <p>
-                    Dành quá nhiều thời gian để
-                    so sánh và cân nhắc giữa
-                    các lựa chọn.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <h3>
-                    ⏳ Trì hoãn
-                </h3>
-
-                <p>
-                    Việc sợ lựa chọn sai có thể
-                    khiến quá trình đưa ra quyết định
-                    bị kéo dài.
+                    Đề xuất một số giải pháp phù hợp và khả thi nhằm giảm
+                    ảnh hưởng tiêu cực của FOBO, hỗ trợ học sinh nâng cao
+                    khả năng ra quyết định và lựa chọn nghề nghiệp phù hợp hơn.
                 </p>
 
             </div>
 
         </div>
 
-    </section>
 
+        <!-- 5. PHƯƠNG PHÁP -->
 
-    <!-- NGHIÊN CỨU -->
+        <div id="phuong-phap" class="intro-box">
 
-    <section
-        class="section"
-        id="nghien-cuu">
+            <h3>5. Phương pháp nghiên cứu</h3>
 
-        <h2>
-            Về nghiên cứu
-        </h2>
+            <div class="cards">
 
-        <p>
+                <div class="card">
 
-            Đề tài tập trung tìm hiểu mức độ
-            ảnh hưởng của FOBO đến quyết định
-            lựa chọn nghề nghiệp của học sinh
-            lớp 12, từ đó đề xuất những giải pháp
-            hỗ trợ học sinh đưa ra lựa chọn
-            phù hợp hơn.
+                    <h3>📚 Nghiên cứu lý thuyết</h3>
 
-        </p>
+                    <p>
+                        Phân tích và tổng hợp các tài liệu trong và ngoài nước
+                        liên quan đến FOBO, quá trình ra quyết định và
+                        định hướng lựa chọn nghề nghiệp.
+                    </p>
 
+                </div>
 
-        <div class="cards">
+                <div class="card">
 
-            <div class="card">
+                    <h3>📋 Điều tra bằng bảng hỏi</h3>
 
-                <h3>
-                    🎯 Mục tiêu
-                </h3>
+                    <p>
+                        Sử dụng Google Forms và phiếu in để thu thập dữ liệu
+                        về mức độ biểu hiện FOBO và quá trình lựa chọn
+                        ngành nghề của học sinh lớp 12.
+                    </p>
 
-                <p>
-                    Xác định mức độ FOBO và
-                    mối liên hệ giữa FOBO với
-                    quyết định lựa chọn nghề nghiệp.
-                </p>
+                </div>
 
-            </div>
+                <div class="card">
 
+                    <h3>🗣️ Phỏng vấn</h3>
 
-            <div class="card">
+                    <p>
+                        Phỏng vấn một nhóm học sinh và phụ huynh nhằm làm rõ
+                        nhận thức, trải nghiệm và những khó khăn trong
+                        quá trình lựa chọn nghề nghiệp.
+                    </p>
 
-                <h3>
-                    📊 Khảo sát
-                </h3>
-
-                <p>
-                    Thu thập dữ liệu từ học sinh
-                    lớp 12 để phân tích thực trạng
-                    và các yếu tố liên quan.
-                </p>
+                </div>
 
             </div>
 
+            <br>
 
             <div class="card">
 
-                <h3>
-                    💡 Giải pháp
-                </h3>
+                <h3>📊 Thống kê toán học</h3>
 
                 <p>
-                    Đề xuất các phương pháp giúp
-                    học sinh giảm sự do dự và
-                    đưa ra quyết định phù hợp.
+                    Dữ liệu được xử lý bằng các công cụ phù hợp như
+                    Microsoft Excel hoặc SPSS. Các chỉ số như tần suất,
+                    tỷ lệ phần trăm, giá trị trung bình và độ lệch chuẩn
+                    được sử dụng để phân tích và trực quan hóa kết quả nghiên cứu.
                 </p>
 
             </div>
 
         </div>
 
-    </section>
 
+        <!-- 6. PHẠM VI -->
 
-    <!-- ĐÁNH GIÁ -->
+        <div class="intro-box">
 
-    <section
-        class="section"
-        id="danh-gia">
+            <h3>6. Phạm vi nghiên cứu</h3>
 
-        <h2>
-            Đánh giá mức độ FOBO
-        </h2>
+            <div class="cards">
 
-        <p>
+                <div class="card">
 
-            Trong phiên bản tiếp theo,
-            bạn có thể thực hiện bài đánh giá
-            để tìm hiểu xu hướng FOBO của bản thân
-            trong quá trình lựa chọn nghề nghiệp.
+                    <h3>📍 Không gian</h3>
 
-        </p>
+                    <p>
+                        Ba trường THPT trên địa bàn xã Tư Nghĩa:
+                        THPT Số 1 Tư Nghĩa, THPT Chu Văn An và THPT Thu Xà.
+                    </p>
 
-        <div
-            style="
-                text-align:center;
-                margin-top:30px;
-            ">
+                </div>
 
-            <a
-                href="#"
-                class="button primary">
+                <div class="card">
 
-                Bài đánh giá đang được phát triển
+                    <h3>👩‍🎓 Khách thể</h3>
 
-            </a>
+                    <p>
+                        Học sinh lớp 12 tại ba trường được lựa chọn khảo sát.
+                        Quy mô mẫu dự kiến khoảng 300–500 học sinh.
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>🗓️ Thời gian</h3>
+
+                    <p>
+                        Đề tài được thực hiện từ ngày 20/07/2026
+                        đến ngày 10/01/2027.
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </section>
+
+        <!-- 7. ĐÓNG GÓP -->
+
+        <div class="intro-box">
+
+            <h3>7. Đóng góp của đề tài</h3>
+
+            <p><strong>Về mặt lý luận:</strong></p>
+
+            <ul class="research-list">
+
+                <li>
+                    Hệ thống hóa cơ sở lý luận về FOBO trong bối cảnh
+                    lựa chọn nghề nghiệp.
+                </li>
+
+                <li>
+                    Xây dựng cơ sở phân tích về FOBO và quyết định nghề nghiệp.
+                </li>
+
+            </ul>
+
+            <br>
+
+            <p><strong>Về mặt thực tiễn:</strong></p>
+
+            <ul class="research-list">
+
+                <li>
+                    Cung cấp dữ liệu thực tiễn về biểu hiện của FOBO
+                    và mối liên hệ với quá trình lựa chọn nghề nghiệp.
+                </li>
+
+                <li>
+                    Đề xuất các giải pháp hỗ trợ học sinh, giáo viên và phụ huynh.
+                </li>
+
+                <li>
+                    Hướng tới xây dựng bộ công cụ tự đánh giá FOBO.
+                </li>
+
+                <li>
+                    Đề xuất quy trình hỗ trợ ra quyết định nghề nghiệp.
+                </li>
+
+                <li>
+                    Xây dựng cẩm nang/sổ tay hướng nghiệp.
+                </li>
+
+            </ul>
+
+        </div>
 
 
-    <!-- FOOTER -->
+        <!-- 8. CẤU TRÚC -->
 
-    <footer>
+        <div class="intro-box">
 
-        <p>
-            FOBO to Focus © 2026
-        </p>
+            <h3>8. Cấu trúc của đề tài</h3>
 
-        <p>
-            Một sản phẩm thuộc đề tài
-            nghiên cứu khoa học kỹ thuật
-            về FOBO và lựa chọn nghề nghiệp.
-        </p>
+            <div class="timeline">
 
-    </footer>
+                <div class="timeline-item">
 
+                    <h3>Chương 1</h3>
+
+                    <p>
+                        Cơ sở lý luận về FOBO và quá trình lựa chọn nghề nghiệp
+                        của học sinh lớp 12.
+                    </p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <h3>Chương 2</h3>
+
+                    <p>
+                        Thực trạng FOBO và ảnh hưởng của FOBO đến quá trình
+                        lựa chọn nghề nghiệp của học sinh lớp 12 tại ba trường
+                        THPT trên địa bàn xã Tư Nghĩa.
+                    </p>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <h3>Chương 3</h3>
+
+                    <p>
+                        Giải pháp hỗ trợ học sinh lớp 12 trong lựa chọn nghề nghiệp
+                        và hạn chế ảnh hưởng tiêu cực của FOBO.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+
+    <p>
+        <strong>FOBO TO FOCUS</strong>
+    </p>
+
+    <p>
+        Hiểu FOBO – Vững vàng lựa chọn tương lai.
+    </p>
+
+    <p>
+        Nguyễn Triều An · Lê Phi Hải
+    </p>
+
+</footer>
 
 </body>
 </html>
