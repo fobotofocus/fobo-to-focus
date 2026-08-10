@@ -854,36 +854,37 @@
 
 
         <!-- 2. FOBO KHÔNG PHẢI LÀ -->
-        <div class="fobo-note">
+       <div class="comparison-box">
 
-            <div class="note-title">
-                FOBO không đồng nghĩa với việc có nhiều lựa chọn
-            </div>
+    <h3>FOBO không đồng nghĩa với việc có nhiều lựa chọn</h3>
 
-            <div class="comparison">
+    <div class="comparison-content">
 
-                <div class="comparison-box">
-                    <span>01</span>
-                    <h4>Nhiều lựa chọn</h4>
-                    <p>
-                        Có nhiều phương án và cần thời gian
-                        để cân nhắc.
-                    </p>
-                </div>
+        <div class="comparison-card normal-choice">
+            <span class="comparison-number">01</span>
 
-                <div class="comparison-arrow">
-                    ≠ 
-                </div>
+            <h4>Nhiều lựa chọn</h4>
 
-                <div class="comparison-box highlight">
-                    <span>02</span>
-                    <h4>FOBO</h4>
-                    <p>
-                        Lo sợ rằng lựa chọn hiện tại chưa phải
-                        là lựa chọn tốt nhất.
-                    </p>
-                </div>
-            </div>
+            <p>
+                Có nhiều phương án và cần thời gian để cân nhắc.
+            </p>
+        </div>
+
+        <div class="comparison-symbol">≠</div>
+
+        <div class="comparison-card fobo-choice">
+            <span class="comparison-number">02</span>
+
+            <h4>FOBO</h4>
+
+            <p>
+                Lo sợ rằng lựa chọn hiện tại chưa phải là lựa chọn tốt nhất.
+            </p>
+        </div>
+
+    </div>
+
+</div>
     
   <div class="intro-box">
 
@@ -1296,87 +1297,122 @@
    NHIỀU LỰA CHỌN ≠ FOBO
    ===================================================== */
 
-.fobo-comparison {
-    background: #e8edf6;
-    border-radius: 22px;
-    padding: 35px 28px;
+/* ===== FOBO COMPARISON ===== */
+
+.comparison-box {
+    margin-top: 45px;
+    padding: 42px 45px;
+    background: #e9eef8;
+    border-radius: 24px;
+}
+
+.comparison-box > h3 {
+    text-align: center;
+    color: #30466f;
+    font-size: 24px;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+.comparison-content {
+    display: grid;
+    grid-template-columns: 1fr 70px 1fr;
+    align-items: center;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.comparison-card {
+    min-height: 220px;
+    padding: 30px;
+    border-radius: 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.fobo-comparison h4 {
-    text-align: center;
-    color: #30466f;
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 25px;
+.normal-choice {
+    background: #ffffff;
+    border: 1px solid #dce3f0;
 }
 
-.comparison-items {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 38px minmax(0, 1fr);
-    gap: 10px;
-    align-items: stretch;
-    width: 100%;
-}
-
-.comparison-card {
-    min-width: 0;
-    width: 100%;
-    padding: 22px 16px;
-    border-radius: 15px;
-    background: white;
-    text-align: center;
-}
-
-.comparison-card.fobo-card {
-    background: #344b7c;
+.fobo-choice {
+    background: #344a78;
     color: white;
 }
 
 .comparison-number {
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 1px;
-    margin-bottom: 12px;
-    opacity: 0.75;
+    margin-bottom: 18px;
+    opacity: 0.7;
 }
 
-.comparison-card h5 {
-    font-size: 17px;
-    line-height: 1.4;
+.comparison-card h4 {
+    font-size: 25px;
     margin-bottom: 12px;
     color: #30466f;
 }
 
-.comparison-card.fobo-card h5 {
+.fobo-choice h4 {
     color: white;
 }
 
 .comparison-card p {
-    font-size: 14px;
-    line-height: 1.65;
-    color: #68768c;
+    font-size: 16px;
+    line-height: 1.7;
     margin: 0;
-    word-break: normal;
-    overflow-wrap: break-word;
+    color: #5d6b83;
 }
 
-.comparison-card.fobo-card p {
-    color: #e3e9f4;
+.fobo-choice p {
+    color: #e6ebf5;
 }
 
 .comparison-symbol {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #d6deee;
+    color: #526483;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #637493;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
+    margin: auto;
 }
 
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 700px) {
+
+    .comparison-box {
+        padding: 30px 20px;
+    }
+
+    .comparison-box > h3 {
+        font-size: 20px;
+    }
+
+    .comparison-content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .comparison-symbol {
+        transform: rotate(90deg);
+        margin: 5px auto;
+    }
+
+    .comparison-card {
+        min-height: auto;
+    }
+}
 
 /* =====================================================
    DÒNG NHẤN MẠNH
