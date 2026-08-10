@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FOBO to Focus</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f8fc;
+            color: #202124;
+            line-height: 1.6;
+        }
+
+        /* THANH ĐIỀU HƯỚNG */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 8%;
+
+            background: white;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #5146d8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #5146d8;
+        }
+
+
+        /* PHẦN TRANG CHỦ */
+
+        .hero {
+            min-height: 85vh;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 60px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #eef0ff,
+                    #ffffff
+                );
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            color: #5146d8;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 26px;
+            font-weight: normal;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+
+            font-size: 18px;
+
+            color: #555;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* NÚT */
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.2s;
+        }
+
+        .primary {
+            background: #5146d8;
+            color: white;
+        }
+
+        .secondary {
+            background: white;
+            color: #5146d8;
+
+            border: 2px solid #5146d8;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+
+        /* PHẦN GIỚI THIỆU */
+
+        .section {
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding: 80px 25px;
+        }
+
+        .section h2 {
+            text-align: center;
+
+            font-size: 34px;
+
+            color: #5146d8;
+
+            margin-bottom: 20px;
+        }
+
+        .section > p {
+            text-align: center;
+
+            max-width: 750px;
+
+            margin: auto;
+
+            color: #555;
+        }
+
+
+        /* CÁC THẺ */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            margin-top: 45px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px
+                rgba(0,0,0,0.06);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+
+            color: #333;
+        }
+
+        .card p {
+            color: #666;
+        }
+
+
+        /* CHÂN TRANG */
+
+        footer {
+            text-align: center;
+
+            padding: 30px;
+
+            background: #202124;
+
+            color: white;
+        }
+
+
+        /* ĐIỆN THOẠI */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- THANH MENU -->
+
+    <nav>
+
+        <div class="logo">
+            FOBO to Focus
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#trang-chu">
+                    Trang chủ
+                </a>
+            </li>
+
+            <li>
+                <a href="#fobo">
+                    FOBO là gì?
+                </a>
+            </li>
+
+            <li>
+                <a href="#nghien-cuu">
+                    Nghiên cứu
+                </a>
+            </li>
+
+            <li>
+                <a href="#danh-gia">
+                    Đánh giá FOBO
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- TRANG CHỦ -->
+
+    <section
+        class="hero"
+        id="trang-chu">
+
+        <h1>
+            FOBO to Focus
+        </h1>
+
+        <h2>
+            Từ nỗi sợ bỏ lỡ đến sự tự tin lựa chọn
+        </h2>
+
+        <p>
+            Website nghiên cứu về ảnh hưởng của
+            hiện tượng FOBO đến quyết định lựa chọn
+            nghề nghiệp của học sinh lớp 12.
+        </p>
+
+        <div class="buttons">
+
+            <a
+                href="#fobo"
+                class="button primary">
+
+                Tìm hiểu về FOBO
+
+            </a>
+
+            <a
+                href="#danh-gia"
+                class="button secondary">
+
+                Đánh giá mức độ FOBO
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOBO LÀ GÌ -->
+
+    <section
+        class="section"
+        id="fobo">
+
+        <h2>
+            FOBO là gì?
+        </h2>
+
+        <p>
+
+            FOBO (Fear of Better Options),
+            hay nỗi sợ bỏ lỡ lựa chọn tốt hơn,
+            là trạng thái tâm lý khiến một người
+            khó đưa ra quyết định vì luôn lo rằng
+            vẫn còn một phương án tốt hơn.
+
+        </p>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    🔍 Luôn tìm kiếm
+                </h3>
+
+                <p>
+                    Không ngừng tìm kiếm những
+                    lựa chọn mới ngay cả khi đã
+                    có một phương án phù hợp.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    🤔 Khó quyết định
+                </h3>
+
+                <p>
+                    Dành quá nhiều thời gian để
+                    so sánh và cân nhắc giữa
+                    các lựa chọn.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    ⏳ Trì hoãn
+                </h3>
+
+                <p>
+                    Việc sợ lựa chọn sai có thể
+                    khiến quá trình đưa ra quyết định
+                    bị kéo dài.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NGHIÊN CỨU -->
+
+    <section
+        class="section"
+        id="nghien-cuu">
+
+        <h2>
+            Về nghiên cứu
+        </h2>
+
+        <p>
+
+            Đề tài tập trung tìm hiểu mức độ
+            ảnh hưởng của FOBO đến quyết định
+            lựa chọn nghề nghiệp của học sinh
+            lớp 12, từ đó đề xuất những giải pháp
+            hỗ trợ học sinh đưa ra lựa chọn
+            phù hợp hơn.
+
+        </p>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    🎯 Mục tiêu
+                </h3>
+
+                <p>
+                    Xác định mức độ FOBO và
+                    mối liên hệ giữa FOBO với
+                    quyết định lựa chọn nghề nghiệp.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    📊 Khảo sát
+                </h3>
+
+                <p>
+                    Thu thập dữ liệu từ học sinh
+                    lớp 12 để phân tích thực trạng
+                    và các yếu tố liên quan.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    💡 Giải pháp
+                </h3>
+
+                <p>
+                    Đề xuất các phương pháp giúp
+                    học sinh giảm sự do dự và
+                    đưa ra quyết định phù hợp.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ĐÁNH GIÁ -->
+
+    <section
+        class="section"
+        id="danh-gia">
+
+        <h2>
+            Đánh giá mức độ FOBO
+        </h2>
+
+        <p>
+
+            Trong phiên bản tiếp theo,
+            bạn có thể thực hiện bài đánh giá
+            để tìm hiểu xu hướng FOBO của bản thân
+            trong quá trình lựa chọn nghề nghiệp.
+
+        </p>
+
+        <div
+            style="
+                text-align:center;
+                margin-top:30px;
+            ">
+
+            <a
+                href="#"
+                class="button primary">
+
+                Bài đánh giá đang được phát triển
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            FOBO to Focus © 2026
+        </p>
+
+        <p>
+            Một sản phẩm thuộc đề tài
+            nghiên cứu khoa học kỹ thuật
+            về FOBO và lựa chọn nghề nghiệp.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
