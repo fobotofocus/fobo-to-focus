@@ -197,18 +197,14 @@
 
         margin-bottom: 25px;
     }
-
     .intro-box h3 {
         color: #354d6d;
         margin-bottom: 15px;
         font-size: 22px;
     }
-
     .intro-box p {
         color: #596879;
     }
-
-
     /* =========================
        CARDS
     ========================= */
@@ -238,8 +234,6 @@
         color: #637184;
         font-size: 15px;
     }
-
-
     /* =========================
        LIST
     ========================= */
@@ -255,7 +249,6 @@
     /* =========================
        TIMELINE
     ========================= */
-
     .timeline {
         border-left: 3px solid #61758f;
         padding-left: 25px;
@@ -464,9 +457,7 @@
                 thực trạng định hướng nghề nghiệp của học sinh, sinh viên
                 Việt Nam vẫn còn nhiều bất cập.
             </p>
-
             <br>
-
             <p>
                 Nhiều học sinh chưa hiểu rõ năng lực, sở thích và giá trị cá nhân
                 của mình; đồng thời chịu ảnh hưởng từ gia đình, bạn bè, mạng xã hội
@@ -481,16 +472,13 @@
                 Đây chính là vấn đề mà hiện tượng FOBO (Fear of Better Options)
                 đặt ra trong quá trình lựa chọn nghề nghiệp.
             </p>
-
             <br>
-
             <p>
                 Vì vậy, đề tài tập trung nghiên cứu thực trạng và ảnh hưởng của
                 FOBO trong lựa chọn ngành nghề của học sinh lớp 12 trên địa bàn
                 xã Tư Nghĩa, đồng thời đề xuất các giải pháp hỗ trợ học sinh
                 đưa ra quyết định nghề nghiệp phù hợp.
             </p>
-
         </div>
         <!-- 2. CÂU HỎI -->
 
@@ -678,12 +666,10 @@
                 <div class="card">
 
                     <h3>📍 Không gian</h3>
-
                     <p>
                         Ba trường THPT trên địa bàn xã Tư Nghĩa:
                         THPT Số 1 Tư Nghĩa, THPT Chu Văn An và THPT Thu Xà.
                     </p>
-
                 </div>
 
                 <div class="card">
@@ -711,8 +697,6 @@
             </div>
 
         </div>
-
-
         <!-- 7. ĐÓNG GÓP -->
 
         <div class="intro-box">
@@ -896,12 +880,8 @@
                         là lựa chọn tốt nhất.
                     </p>
                 </div>
-
             </div>
-
         </div>
-
-
         <!-- 3. QUÁ TRÌNH HÌNH THÀNH -->
         <div class="fobo-process">
 
@@ -1745,7 +1725,76 @@
     font-size: 12px;
 }
 
+/* ===== FOBO PROCESS ===== */
 
+.fobo-process {
+    max-width: 720px;
+    margin: 40px auto 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.process-step {
+    width: 100%;
+    padding: 22px 28px;
+    background: #ffffff;
+    border: 1px solid #d9e0ec;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(32, 43, 72, 0.06);
+    transition: 0.25s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(32, 43, 72, 0.10);
+}
+
+.process-step strong {
+    display: block;
+    color: #263c93;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.process-step small {
+    display: block;
+    color: #69758a;
+    font-size: 14px;
+}
+
+.process-arrow {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7180a0;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.process-highlight {
+    background: #eef2fb;
+    border: 1.5px solid #9daed3;
+}
+
+.process-highlight strong {
+    color: #263c93;
+}
+
+.process-final {
+    background: #263c93;
+    border-color: #263c93;
+}
+
+.process-final strong {
+    color: #ffffff;
+}
+
+.process-final small {
+    color: #dce3f2;
+}
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 850px) {
