@@ -1295,64 +1295,50 @@
     margin-bottom: 25px;
 }
 
-.comparison {
+/* ===== FIX SƠ ĐỒ NHIỀU LỰA CHỌN ≠ FOBO ===== */
+
+.comparison-panel {
+    width: 100%;
+    padding: 35px 30px;
+}
+
+.comparison-items {
+    display: grid;
+    grid-template-columns: 1fr 40px 1fr;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+}
+
+.comparison-card {
+    min-width: 0;
+    width: 100%;
+    padding: 25px 18px;
+    border-radius: 16px;
+    text-align: center;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.comparison-card h4 {
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.comparison-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    word-break: normal;
+}
+
+.comparison-symbol {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    font-size: 26px;
+    color: #65789d;
 }
-
-.comparison-box {
-    flex: 1;
-    background: white;
-    border-radius: 15px;
-    padding: 25px;
-    text-align: center;
-    max-width: 390px;
-}
-
-.comparison-box.highlight {
-    background: #33456f;
-    color: white;
-}
-
-.comparison-box span {
-    display: block;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    color: #7b88a7;
-    margin-bottom: 7px;
-}
-
-.comparison-box.highlight span {
-    color: #cbd3e5;
-}
-
-.comparison-box h4 {
-    color: #33456f;
-    margin-bottom: 8px;
-    font-size: 18px;
-}
-
-.comparison-box.highlight h4 {
-    color: white;
-}
-
-.comparison-box p {
-    color: #68748a;
-    font-size: 14px;
-}
-
-.comparison-box.highlight p {
-    color: #dce2ef;
-}
-
-.comparison-arrow {
-    font-size: 25px;
-    color: #63718f;
-}
-
 
 /* ===== SUB HEADING ===== */
 
