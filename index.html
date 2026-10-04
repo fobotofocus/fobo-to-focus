@@ -351,24 +351,213 @@ section{padding:58px 15px}
    <div class="results-caveat"><strong>Đọc kết quả:</strong> Đây là thống kê mô tả trong 450 phản hồi, không tự chứng minh quan hệ nhân quả.</div>
   </div>
 
-  <div class="results-view" data-view="school" hidden>
-   <h3>02 · Khám phá theo từng trường</h3><p>Chọn trường để xem quy mô mẫu và cơ cấu lựa chọn ngành nghề được ghi nhận trong bảng khảo sát.</p>
-   <div class="school-selector"><label for="schoolSelect">Chọn trường:</label><select id="schoolSelect"><option value="t1">THPT Số 1 Tư Nghĩa</option><option value="cva">THPT Chu Văn An</option><option value="tx">THPT Thu Xà</option></select></div>
-   <div class="school-summary">
-    <div class="school-total"><strong id="schoolN">165</strong><span>phản hồi</span></div>
-    <div>
-     <div class="stacked-bar"><span id="schoolDetermined" class="seg-determined" style="width:32.1%"></span><span id="schoolConsidering" class="seg-considering" style="width:41.8%"></span><span id="schoolUndecided" class="seg-undecided" style="width:26.1%"></span></div>
-     <div class="chart-legend"><span class="legend-item"><span class="legend-dot seg-determined"></span>Đã xác định</span><span class="legend-item"><span class="legend-dot seg-considering"></span>Đang cân nhắc</span><span class="legend-item"><span class="legend-dot seg-undecided"></span>Chưa xác định</span></div>
-     <div class="result-grid-2">
-      <div class="result-card"><h4>Đã xác định</h4><p id="schoolDText">32,1% · khoảng 53 học sinh</p></div>
-      <div class="result-card"><h4>Đang cân nhắc</h4><p id="schoolCText">41,8% · khoảng 69 học sinh</p></div>
-      <div class="result-card"><h4>Chưa xác định</h4><p id="schoolUText">26,1% · khoảng 43 học sinh</p></div>
-      <div class="result-card"><h4>Ghi chú</h4><p id="schoolNote">Tỷ lệ đang cân nhắc chiếm phần lớn trong nhóm khảo sát này.</p></div>
-     </div>
-    </div>
-   </div>
-   <p class="results-caveat">Các tỷ lệ theo trường cần được đối chiếu với bảng dữ liệu gốc trước khi sử dụng để kết luận hoặc so sánh giữa các trường.</p>
+  
+<style>
+.school-explorer {
+  background: #fff;
+  border: 1px solid #dce4ed;
+  border-radius: 16px;
+  padding: 24px;
+  color: #263b5a;
+}
+.school-explorer h3 { margin-top: 0; }
+.school-select {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #fff;
+  color: #263b5a;
+  font: inherit;
+}
+.school-total {
+  margin: 16px 0;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f1f5f9;
+}
+.school-total strong {
+  display: block;
+  font-size: 27px;
+  margin-bottom: 3px;
+}
+.school-result-row { margin: 18px 0; }
+.school-result-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 7px;
+  font-size: 14px;
+}
+.school-track {
+  height: 11px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #e8edf3;
+}
+.school-fill {
+  height: 100%;
+  border-radius: 20px;
+  background: #49698f;
+  transition: width .35s ease;
+}
+.school-subtitle {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+.school-indicators {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 12px;
+}
+.school-indicator {
+  padding: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+}
+.school-indicator strong {
+  display: block;
+  font-size: 23px;
+  margin: 8px 0;
+}
+.school-indicator p {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 0;
+}
+.school-note {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 18px;
+}
+@media(max-width:520px) {
+  .school-explorer { padding: 16px; }
+  .school-indicators { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="school-explorer">
+  <h3>Khám phá theo từng trường</h3>
+  <p>Chọn một trường để xem tình trạng lựa chọn ngành nghề và các biểu hiện FOBO trong mẫu khảo sát.</p>
+
+  <label for="schoolPicker"><strong>Trường khảo sát</strong></label><br><br>
+  <select id="schoolPicker" class="school-select">
+    <option value="tungia">THPT Số 1 Tư Nghĩa</option>
+    <option value="chuvan">THPT Chu Văn An</option>
+    <option value="thuxa">THPT Thu Xà</option>
+  </select>
+
+  <div class="school-total">
+    <strong id="schoolN">165 học sinh</strong>
+    <span id="schoolDescription">Số học sinh tham gia khảo sát tại trường</span>
   </div>
+
+  <h4>Tình trạng lựa chọn ngành nghề</h4>
+  <div id="schoolStatus"></div>
+
+  <h4 class="school-subtitle">Các nhóm biểu hiện FOBO</h4>
+  <div class="school-indicators" id="schoolIndicators"></div>
+
+  <p class="school-note">
+    Điểm trung bình được tính trên thang Likert 1–5. Tỷ lệ đồng ý gồm câu trả lời mức 4 hoặc 5 trong nhóm câu hỏi tương ứng. Kết quả phản ánh mẫu khảo sát, không đại diện tuyệt đối cho toàn bộ học sinh của trường.
+  </p>
+</div>
+
+<script>
+(function () {
+  const data = {
+    tungia: {
+      name: "THPT Số 1 Tư Nghĩa",
+      n: 165,
+      status: [
+        ["Đã xác định", 53, 32.1],
+        ["Đang cân nhắc", 69, 41.8],
+        ["Chưa xác định", 43, 26.1]
+      ],
+      indicators: [
+        ["Xu hướng tìm kiếm lựa chọn tốt nhất", 3.34, 48.3],
+        ["Khó khăn khi đưa ra quyết định", 3.32, 48.3],
+        ["Lo sợ bỏ lỡ lựa chọn tốt hơn", 3.21, 44.1],
+        ["Hối tiếc sau quyết định", 3.18, 41.2]
+      ]
+    },
+    chuvan: {
+      name: "THPT Chu Văn An",
+      n: 145,
+      status: [
+        ["Đã xác định", 24, 16.6],
+        ["Đang cân nhắc", 111, 76.6],
+        ["Chưa xác định", 10, 6.9]
+      ],
+      indicators: [
+        ["Xu hướng tìm kiếm lựa chọn tốt nhất", 3.38, 47.9],
+        ["Khó khăn khi đưa ra quyết định", 3.35, 46.7],
+        ["Lo sợ bỏ lỡ lựa chọn tốt hơn", 3.34, 44.7],
+        ["Hối tiếc sau quyết định", 3.37, 46.7]
+      ]
+    },
+    thuxa: {
+      name: "THPT Thu Xà",
+      n: 140,
+      status: [
+        ["Đã xác định", 15, 10.7],
+        ["Đang cân nhắc", 109, 77.9],
+        ["Chưa xác định", 16, 11.4]
+      ],
+      indicators: [
+        ["Xu hướng tìm kiếm lựa chọn tốt nhất", 3.38, 49.5],
+        ["Khó khăn khi đưa ra quyết định", 3.38, 46.2],
+        ["Lo sợ bỏ lỡ lựa chọn tốt hơn", 3.28, 43.4],
+        ["Hối tiếc sau quyết định", 3.26, 43.0]
+      ]
+    }
+  };
+
+  const picker = document.getElementById("schoolPicker");
+  const statusBox = document.getElementById("schoolStatus");
+  const indicatorsBox = document.getElementById("schoolIndicators");
+
+  function renderSchool(key) {
+    const d = data[key];
+    document.getElementById("schoolN").textContent =
+      d.n + " học sinh";
+    document.getElementById("schoolDescription").textContent =
+      d.name + " · " + d.n + " câu trả lời";
+
+    statusBox.innerHTML = d.status.map(item => `
+      <div class="school-result-row">
+        <div class="school-result-label">
+          <span>${item[0]} (${item[1]} học sinh)</span>
+          <strong>${item[2].toFixed(1)}%</strong>
+        </div>
+        <div class="school-track">
+          <div class="school-fill" style="width:${item[2]}%"></div>
+        </div>
+      </div>
+    `).join("");
+
+    indicatorsBox.innerHTML = d.indicators.map(item => `
+      <div class="school-indicator">
+        <span>${item[0]}</span>
+        <strong>${item[1].toFixed(2)} / 5</strong>
+        <div class="school-track">
+          <div class="school-fill" style="width:${item[1] * 20}%"></div>
+        </div>
+        <p>${item[2].toFixed(1)}% lượt trả lời ở mức đồng ý hoặc hoàn toàn đồng ý</p>
+      </div>
+    `).join("");
+  }
+
+  picker.addEventListener("change", function () {
+    renderSchool(this.value);
+  });
+
+  renderSchool(picker.value);
+})();
+</script>
 
   <div class="results-view" data-view="signals" hidden>
    <h3>03 · Các nhóm chỉ báo</h3><p>Điểm trung bình trên thang Likert 1–5; không phải thang chẩn đoán FOBO.</p>
