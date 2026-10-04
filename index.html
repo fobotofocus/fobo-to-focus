@@ -62,7 +62,6 @@ section:nth-of-type(even){background:#eef2f7}
 .research-flow{display:grid;gap:8px;max-width:650px;margin:22px auto;text-align:center}
 .research-flow div{padding:12px 15px;background:#eef2f7;border:1px solid #d9e1eb;border-radius:9px;font-weight:700;color:var(--navy)}
 .research-flow .highlight-flow{background:var(--navy);color:white}
-.research-flow span{color:var(--mid);font-weight:bold}
 .results-section{background:#f3f6fa}
 .results-hero{padding:30px;border-radius:18px;background:var(--navy);color:white;margin-bottom:20px}
 .results-hero h3{font-size:25px;color:white;margin:15px 0 8px}
@@ -76,7 +75,7 @@ section:nth-of-type(even){background:#eef2f7}
 .results-tab{border:1px solid var(--line);border-radius:8px;background:white;color:var(--blue);font-weight:700;padding:10px 14px;cursor:pointer}
 .results-tab.active,.results-tab:hover{background:var(--navy);color:white}
 .results-view{background:white;border:1px solid var(--line);border-radius:15px;padding:25px;margin-bottom:20px}
-.results-view[hidden]{display:none}
+.results-view[hidden]{display:none!important}
 .results-view h3{font-size:22px;color:var(--navy)}
 .result-grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
 .result-card h4{margin-bottom:16px}
@@ -91,18 +90,39 @@ table{width:100%;border-collapse:collapse;min-width:560px}
 th{background:var(--navy);color:white;text-align:left;padding:12px;font-size:13px}
 td{padding:12px;border-bottom:1px solid var(--line);font-size:14px}
 tr:nth-child(even){background:#f7f9fb}
-.school-selector{margin:18px 0}
-.school-selector select{margin-left:8px;padding:9px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--text);max-width:100%}
-.school-summary{display:grid;grid-template-columns:130px 1fr;gap:20px;align-items:center}
-.school-total strong{display:block;font-size:34px;color:var(--navy)}
-.school-total span{font-size:13px;color:var(--muted)}
-.stacked-bar{display:flex;height:18px;overflow:hidden;border-radius:20px;background:#e8edf3}
-.seg-determined{background:#354d6d}
-.seg-considering{background:#8da1b8}
-.seg-undecided{background:#d0d9e4}
-.chart-legend{display:flex;flex-wrap:wrap;gap:15px;margin:12px 0;font-size:12px;color:var(--muted)}
-.legend-item{display:flex;align-items:center;gap:6px}
-.legend-dot{width:9px;height:9px;border-radius:50%;display:inline-block}
+.school-explorer{margin-top:20px}
+.school-picker-box{background:#f7f9fb;border:1px solid var(--line);border-radius:13px;padding:18px;margin:20px 0}
+.school-picker-box label{display:block;font-weight:700;color:var(--navy);margin-bottom:8px}
+.school-select{width:100%;max-width:520px;padding:12px 14px;border:1px solid #cbd5e1;border-radius:9px;background:white;color:var(--navy);cursor:pointer}
+.school-header{display:grid;grid-template-columns:1fr auto;gap:15px;align-items:center;background:var(--navy);border-radius:14px;padding:22px;color:white;margin-bottom:18px}
+.school-header h4{color:white;font-size:21px;margin:0 0 4px}
+.school-header p{color:#dce4ed;font-size:13px;margin:0}
+.school-count{text-align:right}
+.school-count strong{display:block;font-size:30px;line-height:1.2}
+.school-count span{font-size:12px;color:#dce4ed}
+.school-status-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.school-status-card{border:1px solid var(--line);border-radius:12px;padding:17px;background:white}
+.school-status-card .status-name{font-weight:700;color:var(--navy);font-size:14px;margin-bottom:10px}
+.school-status-card .status-number{display:flex;justify-content:space-between;align-items:end;gap:8px;margin-bottom:8px}
+.school-status-card .status-number strong{font-size:24px;color:var(--navy);line-height:1}
+.school-status-card .status-number span{font-size:13px;color:var(--muted)}
+.school-status-track{height:9px;background:#e8edf3;border-radius:20px;overflow:hidden}
+.school-status-fill{height:100%;border-radius:20px;background:#526b8c;transition:width .4s ease}
+.school-status-card small{display:block;color:var(--muted);font-size:11px;margin-top:8px}
+.school-subtitle{margin:28px 0 15px;padding-top:22px;border-top:1px solid var(--line);color:var(--navy);font-size:20px}
+.school-indicators{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.school-indicator{border:1px solid var(--line);border-radius:12px;padding:18px;background:#fff}
+.school-indicator-title{font-weight:700;color:var(--navy);font-size:14px;line-height:1.45;min-height:42px}
+.school-indicator-score{display:flex;justify-content:space-between;align-items:end;gap:10px;margin:13px 0 8px}
+.school-indicator-score strong{font-size:26px;color:var(--navy)}
+.school-indicator-score span{font-size:12px;color:var(--muted);text-align:right}
+.school-indicator .school-track{height:8px}
+.school-indicator p{font-size:12px;color:var(--muted);margin:10px 0 0}
+.school-compare{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:20px}
+.school-compare-card{background:#f7f9fb;border:1px solid var(--line);border-radius:10px;padding:14px;text-align:center}
+.school-compare-card strong{display:block;font-size:22px;color:var(--navy)}
+.school-compare-card span{font-size:11px;color:var(--muted)}
+.school-note{color:#64748b;font-size:12px;line-height:1.6;margin-top:18px;background:#eef2f7;border-radius:9px;padding:13px 15px}
 .signal-row{display:grid;grid-template-columns:180px 1fr 55px;gap:12px;align-items:center;margin:18px 0}
 .signal-row span{font-size:14px}
 .signal-row strong{text-align:right;color:var(--navy)}
@@ -188,7 +208,9 @@ section{padding:58px 15px}
 .results-kpi strong{font-size:22px}
 .results-tabs{display:grid;grid-template-columns:1fr 1fr}
 .results-tab{padding:10px 5px;font-size:12px}
-.school-summary{grid-template-columns:1fr}
+.school-header{grid-template-columns:1fr}
+.school-count{text-align:left}
+.school-status-grid,.school-indicators,.school-compare{grid-template-columns:1fr}
 .signal-row{grid-template-columns:1fr 45px;gap:7px}
 .signal-row .bar-track{grid-column:1/3;grid-row:2}
 .solution-model{grid-template-columns:1fr}
@@ -284,7 +306,6 @@ section{padding:58px 15px}
    </div>
    <div class="fobo-definition"><div class="definition-line"></div><div><h3>Trong lựa chọn ngành nghề</h3><p>Học sinh có thể lo rằng ngành mình chọn chưa phải ngành tốt nhất, liên tục tìm hiểu ngành mới, khó chốt quyết định hoặc thay đổi lựa chọn khi tiếp cận thông tin hấp dẫn khác.</p></div></div>
   </div>
-
   <div class="intro-box">
    <h3>Những biểu hiện có thể gặp</h3>
    <div class="cards">
@@ -293,7 +314,6 @@ section{padding:58px 15px}
     <div class="card"><h3>Do dự khi quyết định</h3><p>Lo rằng lựa chọn hiện tại có thể khiến mình bỏ lỡ cơ hội tốt hơn.</p></div>
    </div>
   </div>
-
   <div class="process-title"><span class="section-label">QUÁ TRÌNH HÌNH THÀNH</span><h3>FOBO hình thành như thế nào?</h3><p>Quá trình dưới đây minh họa một khả năng thường gặp, không có nghĩa mọi học sinh đều trải qua đủ các bước.</p></div>
   <div class="process-flow">
    <div class="process-item"><strong>01. Nhiều lựa chọn</strong><span>Học sinh tiếp cận nhiều ngành học, trường đào tạo và thông tin nghề nghiệp.</span></div>
@@ -321,12 +341,14 @@ section{padding:58px 15px}
   <div class="section-title"><span class="section-label">KẾT QUẢ NGHIÊN CỨU</span><h2>Kết quả khảo sát thực tế</h2><p>450 phản hồi từ học sinh lớp 12 tại ba trường THPT trên địa bàn Tư Nghĩa</p></div>
   <p class="results-intro">Dữ liệu được thu thập từ ngày 11/08/2026 đến ngày 03/09/2026. Chọn từng mục để khám phá các kết quả.</p>
   <div class="results-hero"><span class="eyebrow">KHẢO SÁT THỰC TẾ · n = 450</span><h3>Điều gì đang khiến học sinh phân vân khi lựa chọn ngành nghề?</h3><p>Khám phá bức tranh chung, cơ cấu mẫu, các phát biểu nổi bật và những chỉ báo liên quan đến quá trình lựa chọn ngành nghề.</p></div>
+
   <div class="results-kpis">
    <button class="results-kpi" data-tab="overview"><strong>450</strong><span>Phản hồi khảo sát</span></button>
    <button class="results-kpi" data-tab="school"><strong>3</strong><span>Trường THPT tham gia</span></button>
    <button class="results-kpi" data-tab="overview"><strong>64,2%</strong><span>Đang cân nhắc ngành nghề</span></button>
    <button class="results-kpi" data-tab="statements"><strong>3,66/5</strong><span>Tìm lựa chọn tốt nhất</span></button>
   </div>
+
   <div class="results-tabs">
    <button class="results-tab active" data-tab="overview">Tổng quan</button>
    <button class="results-tab" data-tab="school">Theo trường</button>
@@ -335,7 +357,8 @@ section{padding:58px 15px}
   </div>
 
   <div class="results-view" data-view="overview">
-   <h3>01 · Bức tranh chung</h3><p>Phân bố mức độ xác định ngành nghề và cơ cấu mẫu khảo sát.</p>
+   <h3>01 · Bức tranh chung</h3>
+   <p>Phân bố mức độ xác định ngành nghề và cơ cấu mẫu khảo sát.</p>
    <div class="result-grid-2">
     <div class="result-card"><h4>Mức độ xác định ngành nghề</h4>
      <div class="bar-item"><div class="bar-top"><span>Đang cân nhắc</span><strong>289 · 64,2%</strong></div><div class="bar-track"><div class="bar-fill" style="width:64.2%"></div></div></div>
@@ -351,213 +374,46 @@ section{padding:58px 15px}
    <div class="results-caveat"><strong>Đọc kết quả:</strong> Đây là thống kê mô tả trong 450 phản hồi, không tự chứng minh quan hệ nhân quả.</div>
   </div>
 
-  
-<style>
-.school-explorer {
-  background: #fff;
-  border: 1px solid #dce4ed;
-  border-radius: 16px;
-  padding: 24px;
-  color: #263b5a;
-}
-.school-explorer h3 { margin-top: 0; }
-.school-select {
-  width: 100%;
-  max-width: 420px;
-  padding: 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 9px;
-  background: #fff;
-  color: #263b5a;
-  font: inherit;
-}
-.school-total {
-  margin: 16px 0;
-  padding: 14px;
-  border-radius: 10px;
-  background: #f1f5f9;
-}
-.school-total strong {
-  display: block;
-  font-size: 27px;
-  margin-bottom: 3px;
-}
-.school-result-row { margin: 18px 0; }
-.school-result-label {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 7px;
-  font-size: 14px;
-}
-.school-track {
-  height: 11px;
-  border-radius: 20px;
-  overflow: hidden;
-  background: #e8edf3;
-}
-.school-fill {
-  height: 100%;
-  border-radius: 20px;
-  background: #49698f;
-  transition: width .35s ease;
-}
-.school-subtitle {
-  margin-top: 26px;
-  padding-top: 20px;
-  border-top: 1px solid #e2e8f0;
-}
-.school-indicators {
-  display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 12px;
-}
-.school-indicator {
-  padding: 15px;
-  border: 1px solid #e2e8f0;
-  border-radius: 11px;
-}
-.school-indicator strong {
-  display: block;
-  font-size: 23px;
-  margin: 8px 0;
-}
-.school-indicator p {
-  font-size: 13px;
-  color: #64748b;
-  margin-bottom: 0;
-}
-.school-note {
-  color: #64748b;
-  font-size: 12px;
-  line-height: 1.6;
-  margin-top: 18px;
-}
-@media(max-width:520px) {
-  .school-explorer { padding: 16px; }
-  .school-indicators { grid-template-columns: 1fr; }
-}
-</style>
+  <div class="results-view" data-view="school" hidden>
+   <h3>02 · Khám phá theo từng trường</h3>
+   <p>Xem chi tiết kết quả khảo sát của từng trường. Các tỷ lệ được tính trên số học sinh tham gia khảo sát tại chính trường đó.</p>
 
-<div class="school-explorer">
-  <h3>Khám phá theo từng trường</h3>
-  <p>Chọn một trường để xem tình trạng lựa chọn ngành nghề và các biểu hiện FOBO trong mẫu khảo sát.</p>
+   <div class="school-explorer">
+    <div class="school-picker-box">
+     <label for="schoolPicker">Chọn trường muốn xem</label>
+     <select id="schoolPicker" class="school-select">
+      <option value="tungia">THPT Số 1 Tư Nghĩa</option>
+      <option value="chuvan">THPT Chu Văn An</option>
+      <option value="thuxa">THPT Thu Xà</option>
+     </select>
+    </div>
 
-  <label for="schoolPicker"><strong>Trường khảo sát</strong></label><br><br>
-  <select id="schoolPicker" class="school-select">
-    <option value="tungia">THPT Số 1 Tư Nghĩa</option>
-    <option value="chuvan">THPT Chu Văn An</option>
-    <option value="thuxa">THPT Thu Xà</option>
-  </select>
+    <div class="school-header">
+     <div>
+      <h4 id="schoolName">THPT Số 1 Tư Nghĩa</h4>
+      <p id="schoolDescription">Kết quả trong mẫu khảo sát của trường</p>
+     </div>
+     <div class="school-count">
+      <strong id="schoolN">165</strong>
+      <span>phản hồi</span>
+     </div>
+    </div>
 
-  <div class="school-total">
-    <strong id="schoolN">165 học sinh</strong>
-    <span id="schoolDescription">Số học sinh tham gia khảo sát tại trường</span>
+    <h4>Tình trạng lựa chọn ngành nghề</h4>
+    <div class="school-status-grid" id="schoolStatus"></div>
+
+    <h4 class="school-subtitle">Các nhóm biểu hiện FOBO</h4>
+    <div class="school-indicators" id="schoolIndicators"></div>
+
+    <div class="school-compare">
+     <div class="school-compare-card"><strong id="schoolShare">36,7%</strong><span>Tỷ trọng trong tổng 450 phản hồi</span></div>
+     <div class="school-compare-card"><strong id="schoolConsidering">41,8%</strong><span>Đang cân nhắc</span></div>
+     <div class="school-compare-card"><strong id="schoolDetermined">32,1%</strong><span>Đã xác định</span></div>
+    </div>
+
+    <div class="school-note"><strong>Cách đọc:</strong> Tỷ lệ tình trạng lựa chọn ngành nghề được tính trên tổng số học sinh của từng trường. Điểm trung bình của các chỉ báo được tính trên thang Likert 1–5; tỷ lệ đồng ý gồm câu trả lời mức 4 hoặc 5. Kết quả phản ánh mẫu khảo sát và không đại diện tuyệt đối cho toàn bộ học sinh của trường.</div>
+   </div>
   </div>
-
-  <h4>Tình trạng lựa chọn ngành nghề</h4>
-  <div id="schoolStatus"></div>
-
-  <h4 class="school-subtitle">Các nhóm biểu hiện FOBO</h4>
-  <div class="school-indicators" id="schoolIndicators"></div>
-
-  <p class="school-note">
-    Điểm trung bình được tính trên thang Likert 1–5. Tỷ lệ đồng ý gồm câu trả lời mức 4 hoặc 5 trong nhóm câu hỏi tương ứng. Kết quả phản ánh mẫu khảo sát, không đại diện tuyệt đối cho toàn bộ học sinh của trường.
-  </p>
-</div>
-
-<script>
-(function () {
-  const data = {
-    tungia: {
-      name: "THPT Số 1 Tư Nghĩa",
-      n: 165,
-      status: [
-        ["Đã xác định", 53, 32.1],
-        ["Đang cân nhắc", 69, 41.8],
-        ["Chưa xác định", 43, 26.1]
-      ],
-      indicators: [
-        ["Xu hướng tìm kiếm lựa chọn tốt nhất", 3.34, 48.3],
-        ["Khó khăn khi đưa ra quyết định", 3.32, 48.3],
-        ["Lo sợ bỏ lỡ lựa chọn tốt hơn", 3.21, 44.1],
-        ["Hối tiếc sau quyết định", 3.18, 41.2]
-      ]
-    },
-    chuvan: {
-      name: "THPT Chu Văn An",
-      n: 145,
-      status: [
-        ["Đã xác định", 24, 16.6],
-        ["Đang cân nhắc", 111, 76.6],
-        ["Chưa xác định", 10, 6.9]
-      ],
-      indicators: [
-        ["Xu hướng tìm kiếm lựa chọn tốt nhất", 3.38, 47.9],
-        ["Khó khăn khi đưa ra quyết định", 3.35, 46.7],
-        ["Lo sợ bỏ lỡ lựa chọn tốt hơn", 3.34, 44.7],
-        ["Hối tiếc sau quyết định", 3.37, 46.7]
-      ]
-    },
-    thuxa: {
-      name: "THPT Thu Xà",
-      n: 140,
-      status: [
-        ["Đã xác định", 15, 10.7],
-        ["Đang cân nhắc", 109, 77.9],
-        ["Chưa xác định", 16, 11.4]
-      ],
-      indicators: [
-        ["Xu hướng tìm kiếm lựa chọn tốt nhất", 3.38, 49.5],
-        ["Khó khăn khi đưa ra quyết định", 3.38, 46.2],
-        ["Lo sợ bỏ lỡ lựa chọn tốt hơn", 3.28, 43.4],
-        ["Hối tiếc sau quyết định", 3.26, 43.0]
-      ]
-    }
-  };
-
-  const picker = document.getElementById("schoolPicker");
-  const statusBox = document.getElementById("schoolStatus");
-  const indicatorsBox = document.getElementById("schoolIndicators");
-
-  function renderSchool(key) {
-    const d = data[key];
-    document.getElementById("schoolN").textContent =
-      d.n + " học sinh";
-    document.getElementById("schoolDescription").textContent =
-      d.name + " · " + d.n + " câu trả lời";
-
-    statusBox.innerHTML = d.status.map(item => `
-      <div class="school-result-row">
-        <div class="school-result-label">
-          <span>${item[0]} (${item[1]} học sinh)</span>
-          <strong>${item[2].toFixed(1)}%</strong>
-        </div>
-        <div class="school-track">
-          <div class="school-fill" style="width:${item[2]}%"></div>
-        </div>
-      </div>
-    `).join("");
-
-    indicatorsBox.innerHTML = d.indicators.map(item => `
-      <div class="school-indicator">
-        <span>${item[0]}</span>
-        <strong>${item[1].toFixed(2)} / 5</strong>
-        <div class="school-track">
-          <div class="school-fill" style="width:${item[1] * 20}%"></div>
-        </div>
-        <p>${item[2].toFixed(1)}% lượt trả lời ở mức đồng ý hoặc hoàn toàn đồng ý</p>
-      </div>
-    `).join("");
-  }
-
-  picker.addEventListener("change", function () {
-    renderSchool(this.value);
-  });
-
-  renderSchool(picker.value);
-})();
-</script>
 
   <div class="results-view" data-view="signals" hidden>
    <h3>03 · Các nhóm chỉ báo</h3><p>Điểm trung bình trên thang Likert 1–5; không phải thang chẩn đoán FOBO.</p>
@@ -655,9 +511,15 @@ section{padding:58px 15px}
    <div id="questionList"></div>
    <div class="fobo-check-actions"><button type="submit" class="button">Xem kết quả</button><button type="button" class="button button-secondary" id="resetButton">Làm lại</button></div>
   </form>
-  <div id="ket-qua" class="fobo-result" aria-live="polite">
+
+  <div id="foboResult" class="fobo-result" aria-live="polite">
    <div class="fobo-result-top"><div class="result-label">KẾT QUẢ TỰ ĐÁNH GIÁ</div><div class="fobo-score"><span id="scoreValue">0</span><span>/65 điểm</span></div><div class="fobo-level" id="levelValue">—</div></div>
-   <div class="fobo-result-content"><p id="resultDescription"></p><div class="fobo-solution-box"><h3>Gợi ý hỗ trợ dành cho bạn</h3><ul id="solutionList" class="fobo-solution-list"></ul></div><p class="note">Kết quả chỉ mang tính tham khảo, giúp bạn tự nhìn nhận cách ra quyết định. Điểm số không phải kết luận chẩn đoán và không quyết định ngành nghề phù hợp với bạn.</p><button type="button" class="button button-secondary" id="againButton">Làm lại bài đánh giá</button></div>
+   <div class="fobo-result-content">
+    <p id="resultDescription"></p>
+    <div class="fobo-solution-box"><h3>Gợi ý hỗ trợ dành cho bạn</h3><ul id="solutionList" class="fobo-solution-list"></ul></div>
+    <p class="note">Kết quả chỉ mang tính tham khảo, giúp bạn tự nhìn nhận cách ra quyết định. Điểm số không phải kết luận chẩn đoán và không quyết định ngành nghề phù hợp với bạn.</p>
+    <button type="button" class="button button-secondary" id="againButton">Làm lại bài đánh giá</button>
+   </div>
   </div>
  </div>
 </section>
@@ -688,23 +550,116 @@ document.querySelectorAll(".results-tab,.results-kpi").forEach(b=>{
  b.addEventListener("click",()=>showResultsTab(b.dataset.tab));
 });
 
-/* LỰA CHỌN TRƯỜNG
-   Chỉ số liệu tổng hợp toàn mẫu được hiển thị như kết quả đã xác nhận.
-   Tỷ lệ phân nhóm từng trường cần đối chiếu bảng dữ liệu gốc. */
-const schoolSamples={
- t1:{n:165,name:"THPT Số 1 Tư Nghĩa"},
- cva:{n:145,name:"THPT Chu Văn An"},
- tx:{n:140,name:"THPT Thu Xà"}
+/* KHÁM PHÁ KẾT QUẢ THEO TỪNG TRƯỜNG */
+const schoolData={
+ tungia:{
+  name:"THPT Số 1 Tư Nghĩa",
+  n:165,
+  status:[
+   ["Đã xác định",53,32.1],
+   ["Đang cân nhắc",69,41.8],
+   ["Chưa xác định",43,26.1]
+  ],
+  indicators:[
+   ["Xu hướng tìm kiếm lựa chọn tốt nhất",3.34,48.3],
+   ["Khó khăn khi đưa ra quyết định",3.32,48.3],
+   ["Lo sợ bỏ lỡ lựa chọn tốt hơn",3.21,44.1],
+   ["Hối tiếc sau quyết định",3.18,41.2]
+  ]
+ },
+ chuvan:{
+  name:"THPT Chu Văn An",
+  n:145,
+  status:[
+   ["Đã xác định",24,16.6],
+   ["Đang cân nhắc",111,76.6],
+   ["Chưa xác định",10,6.9]
+  ],
+  indicators:[
+   ["Xu hướng tìm kiếm lựa chọn tốt nhất",3.38,47.9],
+   ["Khó khăn khi đưa ra quyết định",3.35,46.7],
+   ["Lo sợ bỏ lỡ lựa chọn tốt hơn",3.34,44.7],
+   ["Hối tiếc sau quyết định",3.37,46.7]
+  ]
+ },
+ thuxa:{
+  name:"THPT Thu Xà",
+  n:140,
+  status:[
+   ["Đã xác định",15,10.7],
+   ["Đang cân nhắc",109,77.9],
+   ["Chưa xác định",16,11.4]
+  ],
+  indicators:[
+   ["Xu hướng tìm kiếm lựa chọn tốt nhất",3.38,49.5],
+   ["Khó khăn khi đưa ra quyết định",3.38,46.2],
+   ["Lo sợ bỏ lỡ lựa chọn tốt hơn",3.28,43.4],
+   ["Hối tiếc sau quyết định",3.26,43.0]
+  ]
+ }
 };
-document.getElementById("schoolSelect").addEventListener("change",e=>{
- const school=schoolSamples[e.target.value];
- document.getElementById("schoolN").textContent=school.n;
- ["schoolDetermined","schoolConsidering","schoolUndecided"].forEach(id=>document.getElementById(id).style.width="0%");
- document.getElementById("schoolDText").textContent="Chưa hiển thị tỷ lệ theo trường";
- document.getElementById("schoolCText").textContent="Chưa hiển thị tỷ lệ theo trường";
- document.getElementById("schoolUText").textContent="Chưa hiển thị tỷ lệ theo trường";
- document.getElementById("schoolNote").textContent="Quy mô mẫu của "+school.name+" là "+school.n+" phản hồi. Cần đối chiếu bảng dữ liệu gốc để trình bày tỷ lệ chi tiết.";
+
+const schoolPicker=document.getElementById("schoolPicker");
+const schoolName=document.getElementById("schoolName");
+const schoolDescription=document.getElementById("schoolDescription");
+const schoolN=document.getElementById("schoolN");
+const schoolStatus=document.getElementById("schoolStatus");
+const schoolIndicators=document.getElementById("schoolIndicators");
+const schoolShare=document.getElementById("schoolShare");
+const schoolConsidering=document.getElementById("schoolConsidering");
+const schoolDetermined=document.getElementById("schoolDetermined");
+
+function formatPercent(value){
+ return value.toFixed(1).replace(".",",")+"%";
+}
+
+function renderSchool(key){
+ const d=schoolData[key];
+ schoolName.textContent=d.name;
+ schoolDescription.textContent="Kết quả trong "+d.name+" · mẫu khảo sát riêng của trường";
+ schoolN.textContent=d.n;
+
+ const sampleShare=d.n/450*100;
+ schoolShare.textContent=formatPercent(sampleShare);
+
+ schoolStatus.innerHTML=d.status.map(item=>`
+  <div class="school-status-card">
+   <div class="status-name">${item[0]}</div>
+   <div class="status-number">
+    <strong>${item[2].toFixed(1).replace(".",",")}%</strong>
+    <span>${item[1]} học sinh</span>
+   </div>
+   <div class="school-status-track">
+    <div class="school-status-fill" style="width:${item[2]}%"></div>
+   </div>
+   <small>${item[1]}/${d.n} học sinh</small>
+  </div>
+ `).join("");
+
+ const considering=d.status.find(item=>item[0]==="Đang cân nhắc");
+ const determined=d.status.find(item=>item[0]==="Đã xác định");
+ schoolConsidering.textContent=formatPercent(considering[2]);
+ schoolDetermined.textContent=formatPercent(determined[2]);
+
+ schoolIndicators.innerHTML=d.indicators.map(item=>`
+  <div class="school-indicator">
+   <div class="school-indicator-title">${item[0]}</div>
+   <div class="school-indicator-score">
+    <strong>${item[1].toFixed(2).replace(".",",")} / 5</strong>
+    <span>${formatPercent(item[2])}<br>đồng ý hoặc hoàn toàn đồng ý</span>
+   </div>
+   <div class="school-track">
+    <div class="school-fill" style="width:${item[1]*20}%"></div>
+   </div>
+   <p>Điểm trung bình trên thang Likert 1–5.</p>
+  </div>
+ `).join("");
+}
+
+schoolPicker.addEventListener("change",function(){
+ renderSchool(this.value);
 });
+renderSchool(schoolPicker.value);
 
 /* FOBO CHECK: 13 câu, mỗi câu 1–5 điểm */
 const questions=[
@@ -722,46 +677,63 @@ const questions=[
 "Tôi thường lo rằng một lựa chọn tưởng như tốt hiện tại có thể không phải là lựa chọn tốt nhất về lâu dài.",
 "Nếu biết vẫn còn những ngành nghề khác có thể phù hợp hơn, tôi khó có thể hài lòng hoàn toàn với lựa chọn hiện tại."
 ];
+
 const scaleLabels=["Hoàn toàn không đúng","Không đúng","Phân vân","Đúng","Hoàn toàn đúng"];
 const questionList=document.getElementById("questionList");
+
 questions.forEach((question,index)=>{
  const n=index+1;
  const wrapper=document.createElement("div");
  wrapper.className="fobo-question";
+
  const number=document.createElement("div");
  number.className="fobo-question-number";
  number.textContent="CÂU "+String(n).padStart(2,"0");
+
  const text=document.createElement("div");
  text.className="fobo-question-text";
  text.textContent=question;
+
  const scale=document.createElement("div");
  scale.className="fobo-scale";
+
  for(let value=1;value<=5;value++){
   const option=document.createElement("div");
   option.className="fobo-scale-option";
+
   const input=document.createElement("input");
-  input.type="radio";input.id=`q${n}-${value}`;input.name=`q${n}`;input.value=value;
+  input.type="radio";
+  input.id=`q${n}-${value}`;
+  input.name=`q${n}`;
+  input.value=value;
   input.addEventListener("change",updateProgress);
+
   const label=document.createElement("label");
   label.htmlFor=input.id;
+
   const numberSpan=document.createElement("span");
   numberSpan.className="fobo-scale-number";
   numberSpan.textContent=value;
+
   const desc=document.createElement("span");
   desc.className="fobo-scale-description";
   desc.textContent=scaleLabels[value-1];
+
   label.append(numberSpan,desc);
   option.append(input,label);
   scale.appendChild(option);
  }
+
  wrapper.append(number,text,scale);
  questionList.appendChild(wrapper);
 });
+
 function updateProgress(){
  const answered=questions.filter((_,i)=>document.querySelector(`input[name="q${i+1}"]:checked`)).length;
  document.getElementById("progressText").textContent=`${answered}/13 câu`;
  document.getElementById("progressBar").style.width=(answered/13*100)+"%";
 }
+
 const scoreResults=[
  {max:13,level:"Rất thấp",description:"Các câu trả lời cho thấy bạn hiện có ít biểu hiện của xu hướng FOBO trong quá trình lựa chọn ngành nghề. Bạn nhìn chung có khả năng cân nhắc các phương án mà không quá bị chi phối bởi lo ngại rằng vẫn còn một lựa chọn tốt hơn.",solutions:["Tiếp tục xác định rõ những tiêu chí quan trọng khi lựa chọn ngành nghề.","Tránh tìm kiếm thông tin quá mức khi đã có đủ dữ liệu để đưa ra quyết định.","Định kỳ xem xét lại lựa chọn của mình dựa trên thông tin mới có ý nghĩa."]},
  {max:26,level:"Thấp",description:"Bạn có một số biểu hiện của FOBO nhưng nhìn chung vẫn có khả năng đưa ra lựa chọn tương đối rõ ràng. Việc tìm kiếm và so sánh các phương án có thể xuất hiện nhưng chưa gây ảnh hưởng lớn đến quá trình quyết định.",solutions:["Xác định trước những tiêu chí quan trọng nhất đối với bản thân.","Giới hạn số lượng ngành nghề cần so sánh thay vì mở rộng danh sách liên tục.","Đặt một khoảng thời gian cụ thể để tìm hiểu và đưa ra quyết định."]},
@@ -769,40 +741,52 @@ const scoreResults=[
  {max:53,level:"Khá cao",description:"Bạn có khá nhiều biểu hiện FOBO. Nỗi lo rằng còn một lựa chọn tốt hơn có thể khiến việc tìm kiếm, so sánh và chốt quyết định trở nên khó khăn hơn.",solutions:["Giới hạn việc tìm hiểu chuyên sâu ở khoảng 3–5 lựa chọn phù hợp nhất.","Xác định những tiêu chí bắt buộc và sử dụng chúng để loại bỏ các phương án không phù hợp.","Đặt thời hạn rõ ràng cho việc tìm kiếm thông tin và cam kết dừng tìm kiếm sau thời hạn đó.","Không liên tục bổ sung lựa chọn mới nếu thông tin mới không thực sự làm thay đổi đánh giá.","Trao đổi với giáo viên, phụ huynh hoặc người có chuyên môn hướng nghiệp.","Sau khi lựa chọn, tập trung vào việc phát triển bản thân thay vì liên tục so sánh với những phương án chưa chọn."]},
  {max:65,level:"Cao",description:"Bạn có mức độ biểu hiện FOBO cao trong bài tự đánh giá. Việc liên tục tìm kiếm, so sánh hoặc nghi ngờ lựa chọn hiện tại có thể đang làm quá trình quyết định ngành nghề trở nên khó khăn hơn.",solutions:["Tạm dừng việc mở rộng thêm các lựa chọn mới và tập trung vào những phương án đã được cân nhắc.","Xác định một số tiêu chí cốt lõi dựa trên năng lực, sở thích, giá trị cá nhân và điều kiện thực tế.","Đặt một thời hạn cụ thể để hoàn tất quá trình tìm hiểu và đưa ra quyết định.","Trao đổi trực tiếp với giáo viên, phụ huynh hoặc người có chuyên môn hướng nghiệp để có góc nhìn bên ngoài.","Tập trung đánh giá mức độ phù hợp của lựa chọn hiện tại thay vì cố gắng chứng minh rằng đó là lựa chọn tốt nhất tuyệt đối.","Sau khi quyết định, chuyển trọng tâm từ việc tiếp tục so sánh sang việc chuẩn bị và phát triển năng lực cho lựa chọn đó."]}
 ];
+
 function resetAssessment(){
  document.getElementById("foboForm").reset();
- document.getElementById("ket-qua").classList.remove("show");
+ document.getElementById("foboResult").classList.remove("show");
  updateProgress();
 }
+
 document.getElementById("foboForm").addEventListener("submit",event=>{
  event.preventDefault();
  let score=0;
+
  for(let i=1;i<=13;i++){
   const selected=document.querySelector(`input[name="q${i}"]:checked`);
+
   if(!selected){
    alert("Vui lòng trả lời đầy đủ cả 13 câu trước khi xem kết quả.");
    const firstQuestion=document.querySelectorAll(".fobo-question")[i-1];
    firstQuestion.scrollIntoView({behavior:"smooth",block:"center"});
    return;
   }
+
   score+=Number(selected.value);
  }
+
  const result=scoreResults.find(item=>score<=item.max);
+
  document.getElementById("scoreValue").textContent=score;
  document.getElementById("levelValue").textContent=result.level;
  document.getElementById("resultDescription").textContent=result.description;
+
  const list=document.getElementById("solutionList");
  list.replaceChildren();
+
  result.solutions.forEach(solution=>{
   const li=document.createElement("li");
   li.textContent=solution;
   list.appendChild(li);
  });
- const resultBox=document.getElementById("ket-qua");
+
+ const resultBox=document.getElementById("foboResult");
  resultBox.classList.add("show");
  resultBox.scrollIntoView({behavior:"smooth",block:"start"});
 });
+
 document.getElementById("resetButton").addEventListener("click",resetAssessment);
+
 document.getElementById("againButton").addEventListener("click",()=>{
  resetAssessment();
  document.getElementById("cong-cu").scrollIntoView({behavior:"smooth",block:"start"});
