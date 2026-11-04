@@ -65,6 +65,851 @@ section:nth-of-type(even){background:#eef2f7}
 .research-flow div{padding:12px 15px;background:#eef2f7;border:1px solid #d9e1eb;border-radius:9px;font-weight:700;color:var(--navy)}
 .research-flow .highlight-flow{background:var(--navy);color:white}
 
+/* STYLING DASHBOARD KẾT QUẢ KHẢO SÁT MỚI */
+.results-section{background:#f3f6fa}
+.dashboard-block{background:white;border:1px solid var(--line);border-radius:18px;padding:28px;margin-bottom:24px;box-shadow:var(--shadow)}
+.dashboard-block-title{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:20px;display:flex;align-items:center;gap:10px;border-bottom:2px solid var(--pale);padding-bottom:10px}
+.dashboard-block-title span.number-badge{background:var(--navy);color:white;font-size:13px;padding:3px 10px;border-radius:6px}
+
+.overview-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px;align-items:stretch}
+.overview-card{background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.overview-card h5{font-size:12px;color:var(--muted);text-transform:uppercase;margin-bottom:8px;font-weight:700}
+.overview-card .big-num{font-size:26px;font-weight:800;color:var(--navy)}
+.overview-card .sub-text{font-size:12px;color:var(--mid);margin-top:4px}
+.chart-box-container{position:relative;height:220px;width:100%;display:flex;justify-content:center;align-items:center}
+.chart-box-small{position:relative;height:180px;width:100%}
+
+.factor-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.factor-tab{background:var(--pale);border:1px solid var(--line);border-radius:8px;padding:8px 14px;font-size:13px;font-weight:700;color:var(--blue);cursor:pointer;transition:.2s}
+.factor-tab.active,.factor-tab:hover{background:var(--navy);color:white;border-color:var(--navy)}
+
+.filter-bar{display:flex;flex-wrap:wrap;gap:15px;align-items:center;background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:22px}
+.filter-group{display:flex;align-items:center;gap:8px;flex:1;min-width:200px}
+.filter-group label{font-size:13px;font-weight:700;color:var(--navy);white-space:nowrap}
+.filter-group select{width:100%;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--text);cursor:pointer}
+
+.insights-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.insight-card{background:white;border:1px solid var(--line);border-radius:14px;padding:20px 16px;text-align:center;box-shadow:var(--shadow)}
+.insight-card .icon{font-size:24px;margin-bottom:8px}
+.insight-card .percentage{font-size:28px;font-weight:800;color:var(--navy);margin-bottom:6px}
+.insight-card p{font-size:12px;color:var(--muted);line-height:1.4}
+
+.solutions-section{background:#f8f9fb}
+.solution-intro{background:#e9eef5;padding:25px;border-radius:14px;margin-bottom:22px}
+.solution-block{margin:18px 0}
+.solution-block h3{font-size:22px}
+.solution-block h4{margin:14px 0 7px}
+.solution-model{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px;margin:25px 0}
+.solution-model-item{background:#e8edf4;border:1px solid var(--line);border-radius:12px;padding:20px;text-align:center}
+.solution-model-item strong{display:block;color:var(--navy)}
+.solution-model-item span{font-size:11px;letter-spacing:1px;color:var(--muted)}
+.solution-model-arrow{color:var(--mid);font-weight:bold}
+.solution-feature-grid,.kit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+.solution-feature,.kit-card{border:1px solid var(--line);background:#f7f9fb;border-radius:11px;padding:17px}
+.solution-feature strong,.kit-card h4{color:var(--navy)}
+.solution-feature p,.kit-card p{font-size:13px;color:var(--muted);margin-top:6px}
+.kit-card>span{font-size:12px;color:var(--mid);font-weight:800}
+.solution-conclusion{background:var(--navy);color:white;border-radius:14px;padding:25px;margin-top:22px}
+.solution-conclusion span{font-size:12px;letter-spacing:2px;font-weight:800}
+.solution-conclusion p{margin-top:10px;color:#e6ebf2}
+.fobo-check-container{max-width:900px;margin:auto}
+.fobo-check-header{text-align:center;margin-bottom:30px}
+.fobo-check-header h2{font-size:38px;color:var(--navy);margin:8px 0}
+.fobo-check-header p{color:var(--muted)}
+.fobo-check-note{background:#e8edf4;border-radius:12px;padding:18px;margin-bottom:22px;font-size:14px}
+.fobo-progress-box{background:white;border:1px solid var(--line);padding:16px;border-radius:12px;margin-bottom:22px}
+.fobo-progress-top{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:8px}
+.fobo-progress-track{height:8px;background:#e8edf3;border-radius:20px;overflow:hidden}
+.fobo-progress-bar{height:100%;width:0;background:var(--blue);transition:width .2s}
+.fobo-question{background:white;border:1px solid var(--line);border-radius:13px;padding:21px;margin-bottom:14px}
+.fobo-question-number{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--mid);margin-bottom:8px}
+.fobo-question-text{font-weight:700;color:var(--navy);margin-bottom:16px}
+.fobo-scale{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}
+.fobo-scale-option input{position:absolute;opacity:0;pointer-events:none}
+.fobo-scale-option label{height:100%;min-height:70px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;text-align:center;border:1px solid var(--line);border-radius:9px;padding:8px 4px;cursor:pointer;background:#fafbfd}
+.fobo-scale-option label:hover{border-color:var(--mid)}
+.fobo-scale-number{font-size:19px;font-weight:800;color:var(--navy)}
+.fobo-scale-description{font-size:10px;line-height:1.3;color:var(--muted)}
+.fobo-scale-option input:checked+label{background:#e5ebf4;border:2px solid var(--blue)}
+.fobo-check-actions{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.button-secondary{background:#e4eaf2;color:var(--navy)}
+.fobo-result{display:none;background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:25px}
+.fobo-result.show{display:block}
+.fobo-result-top{padding:28px;background:var(--navy);color:white;text-align:center}
+.result-label{font-size:12px;letter-spacing:2px;font-weight:800}
+.fobo-score{font-size:38px;font-weight:800;margin:10px 0}
+.fobo-score span:last-child{font-size:16px}
+.fobo-level{font-size:20px;font-weight:800}
+.fobo-result-content{padding:25px}
+.fobo-solution-box{background:#eef2f7;border-radius:12px;padding:20px;margin-top:18px}
+.fobo-solution-list{padding-left:20px}
+.fobo-solution-list li{margin:8px 0}
+footer{text-align:center;padding:35px 20px;background:#e7ecf3;color:#657286;font-size:13px}
+
+@media(max-width:1050px){
+.nav-container{padding:12px 18px}
+.menu-toggle{display:block}
+.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#f8f9fb;flex-direction:column;align-items:stretch;gap:0;padding:8px 18px 16px;border-bottom:1px solid var(--line);box-shadow:0 12px 20px #263b5a14;max-height:calc(100vh - 60px);overflow:auto}
+.nav-links.open{display:flex}
+.nav-links li a{display:block;padding:12px 10px;border-bottom:1px solid #e8edf2;font-size:14px}
+.cards,.overview-grid,.insights-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+.process-flow{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.process-item:not(:last-child):after{display:none}
+}
+@media(max-width:650px){
+section{padding:58px 15px}
+.nav-container{padding:11px 15px}
+.logo{font-size:17px}
+.hero{min-height:88vh;padding:120px 18px 65px}
+.hero-description{font-size:14px}
+.cards,.overview-grid,.insights-row,.solution-feature-grid,.kit-grid{grid-template-columns:1fr}
+.intro-box,.card,.theory-block,.solution-block{padding:19px}
+.fobo-intro{grid-template-columns:1fr}
+.fobo-intro-main,.fobo-definition{padding:23px}
+.process-flow{grid-template-columns:1fr 1fr}
+.process-item{min-height:unset;padding:17px 12px}
+.solution-model{grid-template-columns:1fr}
+.solution-model-arrow{transform:rotate(90deg);text-align:center}
+.fobo-scale{gap:3px}
+.fobo-scale-option label{min-height:75px;padding:6px 2px}
+.fobo-scale-description{font-size:9px}
+.fobo-question{padding:15px}
+.fobo-check-header h2{font-size:32px}
+.fobo-score{font-size:32px}
+}
+</style>
+</head>
+<body>
+<nav>
+ <div class="nav-container">
+  <a href="#home" class="logo">FOBO TO FOCUS</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false">MENU ☰</button>
+  <ul class="nav-links" id="navLinks">
+   <li><a href="#home">Trang chủ</a></li>
+   <li><a href="#gioi-thieu">Giới thiệu</a></li>
+   <li><a href="#mo-dau">Về nghiên cứu</a></li>
+   <li><a href="#fobo">FOBO là gì?</a></li>
+   <li><a href="#co-so-ly-luan">Cơ sở lý luận</a></li>
+   <li><a href="#ket-qua">Kết quả nghiên cứu</a></li>
+   <li><a href="#giai-phap">Giải pháp</a></li>
+   <li><a href="#cong-cu">FOBO Check</a></li>
+  </ul>
+ </div>
+</nav>
+
+<header class="hero" id="home">
+ <div class="hero-content">
+  <span class="tag">NGHIÊN CỨU KHOA HỌC KỸ THUẬT</span>
+  <h1>FOBO TO FOCUS</h1>
+  <div class="slogan">Hiểu FOBO – Vững vàng lựa chọn tương lai.</div>
+  <p class="hero-description">Nghiên cứu ảnh hưởng của FOBO đến quyết định lựa chọn ngành nghề của học sinh lớp 12 trên địa bàn xã Tư Nghĩa và giải pháp hỗ trợ ra quyết định nghề nghiệp.</p>
+  <div class="authors">Tác giả: <strong>Lê Phi Hải</strong> – <strong>Nguyễn Triều An</strong></div>
+  <a href="#gioi-thieu" class="button">Khám phá nghiên cứu</a>
+ </div>
+</header>
+
+<section id="gioi-thieu">
+ <div class="container">
+  <div class="section-title"><span class="section-label">FOBO TO FOCUS</span><h2>Giới thiệu đề tài</h2><p>FOBO và quyết định nghề nghiệp của học sinh lớp 12</p></div>
+  <div class="intro-box">
+   <h3>Lý do chọn đề tài</h3>
+   <p>Trong bối cảnh học sinh phải đứng trước nhiều ngành học, trường đào tạo và nguồn thông tin khác nhau, việc lựa chọn nghề nghiệp có thể trở nên phức tạp. Học sinh không chỉ cần tìm hiểu các phương án mà còn phải đánh giá mức độ phù hợp của chúng với năng lực, sở thích, giá trị cá nhân và điều kiện thực tế.</p>
+   <p>Nỗi lo rằng vẫn còn một lựa chọn tốt hơn có thể khiến học sinh tiếp tục tìm kiếm, so sánh và trì hoãn quyết định. Đề tài tập trung tìm hiểu biểu hiện FOBO trong lựa chọn ngành nghề của học sinh lớp 12 tại xã Tư Nghĩa và đề xuất các giải pháp hỗ trợ.</p>
+  </div>
+  <div class="cards">
+   <div class="card"><h3>Mục tiêu nghiên cứu</h3><p>Khảo sát thực trạng FOBO, tìm hiểu các yếu tố liên quan đến quá trình lựa chọn ngành nghề và đề xuất giải pháp hỗ trợ học sinh.</p></div>
+   <div class="card"><h3>Đối tượng khảo sát</h3><p>Học sinh lớp 12 tại THPT Số 1 Tư Nghĩa, THPT Chu Văn An và THPT Thu Xà.</p></div>
+   <div class="card"><h3>Phương pháp</h3><p>Kết hợp nghiên cứu tài liệu, khảo sát bằng bảng hỏi, phỏng vấn và xử lý thống kê dữ liệu.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="mo-dau">
+ <div class="container">
+  <div class="section-title"><span class="section-label">TỔNG QUAN</span><h2>Về nghiên cứu</h2><p>Mục tiêu, câu hỏi và phạm vi nghiên cứu</p></div>
+  <div class="intro-box">
+   <h3>Câu hỏi nghiên cứu</h3>
+   <ol class="research-list">
+    <li>Biểu hiện FOBO phổ biến ở học sinh lớp 12 hiện nay là gì?</li>
+    <li>FOBO có mối liên hệ như thế nào với quá trình lựa chọn nghề nghiệp của học sinh lớp 12 trên địa bàn xã Tư Nghĩa?</li>
+    <li>Cần có những giải pháp nào để hỗ trợ học sinh khi xuất hiện xu hướng FOBO trong quá trình lựa chọn nghề nghiệp?</li>
+   </ol>
+  </div>
+  <div class="intro-box">
+   <h3>Phạm vi nghiên cứu</h3>
+   <p><strong>Không gian:</strong> THPT Số 1 Tư Nghĩa, THPT Chu Văn An và THPT Thu Xà.</p>
+   <p><strong>Khách thể:</strong> Học sinh lớp 12 tại các trường được khảo sát.</p>
+   <p><strong>Thời gian thực hiện đề tài:</strong> 20/07/2026–10/01/2027.</p>
+   <p><strong>Phương pháp xử lý dữ liệu:</strong> Thống kê tần suất, tỷ lệ phần trăm, giá trị trung bình và độ lệch chuẩn phù hợp với từng nội dung khảo sát.</p>
+  </div>
+ </div>
+</section>
+
+<section id="fobo">
+ <div class="container">
+  <div class="section-title"><span class="section-label">HIỂU ĐÚNG VỀ FOBO</span><h2>FOBO là gì?</h2><p>Fear of Better Options – nỗi lo rằng vẫn còn lựa chọn tốt hơn</p></div>
+  <div class="fobo-intro">
+   <div class="fobo-intro-main">
+    <span class="section-label">FEAR OF BETTER OPTIONS</span>
+    <h3>Nỗi sợ bỏ lỡ lựa chọn tốt hơn</h3>
+    <p>FOBO mô tả xu hướng lo ngại rằng một phương án khác có thể tốt hơn phương án đang cân nhắc. Vì vậy, một người có thể tiếp tục tìm kiếm, so sánh hoặc nghi ngờ lựa chọn hiện tại ngay cả khi đã có những phương án tương đối phù hợp.</p>
+   </div>
+   <div class="fobo-definition"><div class="definition-line"></div><div><h3>Trong lựa chọn ngành nghề</h3><p>Học sinh có thể lo rằng ngành mình chọn chưa phải ngành tốt nhất, liên tục tìm hiểu ngành mới, khó chốt quyết định hoặc thay đổi lựa chọn khi tiếp cận thông tin hấp dẫn khác.</p></div></div>
+  </div>
+  <div class="intro-box">
+   <h3>Những biểu hiện có thể gặp</h3>
+   <div class="cards">
+    <div class="card"><h3>Tìm kiếm liên tục</h3><p>Tiếp tục tìm ngành nghề mới dù đã có một số lựa chọn phù hợp.</p></div>
+    <div class="card"><h3>So sánh quá nhiều</h3><p>Khó thu hẹp danh sách vì muốn cân nhắc thêm nhiều phương án.</p></div>
+    <div class="card"><h3>Do dự khi quyết định</h3><p>Lo rằng lựa chọn hiện tại có thể khiến mình bỏ lỡ cơ hội tốt hơn.</p></div>
+   </div>
+  </div>
+  <div class="process-title"><span class="section-label">QUÁ TRÌNH HÌNH THÀNH</span><h3>FOBO hình thành như thế nào?</h3><p>Quá trình dưới đây minh họa một khả năng thường gặp, không có nghĩa mọi học sinh đều trải qua đủ các bước.</p></div>
+  <div class="process-flow">
+   <div class="process-item"><strong>01. Nhiều lựa chọn</strong><span>Học sinh tiếp cận nhiều ngành học, trường đào tạo và thông tin nghề nghiệp.</span></div>
+   <div class="process-item"><strong>02. Muốn chọn tốt nhất</strong><span>Hình thành mong muốn tìm phương án tối ưu, tránh bỏ sót cơ hội.</span></div>
+   <div class="process-item"><strong>03. Tiếp tục so sánh</strong><span>Tìm kiếm thêm thông tin và cân nhắc ngày càng nhiều lựa chọn.</span></div>
+   <div class="process-item"><strong>04. Lo ngại, nghi ngờ</strong><span>Băn khoăn liệu còn ngành nào phù hợp hơn lựa chọn hiện tại.</span></div>
+   <div class="process-item"><strong>05. Khó chốt quyết định</strong><span>Có thể trì hoãn, thay đổi lựa chọn hoặc khó hài lòng với quyết định.</span></div>
+  </div>
+  <div class="note"><strong>Lưu ý:</strong> FOBO được sử dụng trong đề tài như một hiện tượng tâm lý/xu hướng liên quan đến ra quyết định, không phải kết luận chẩn đoán bệnh lý. Sơ đồ trên là khung giải thích; mối liên hệ thực tế cần được xem xét bằng dữ liệu nghiên cứu.</div>
+ </div>
+</section>
+
+<section id="co-so-ly-luan">
+ <div class="container">
+  <div class="section-title"><span class="section-label">NỀN TẢNG NGHIÊN CỨU</span><h2>Cơ sở lý luận</h2><p>Các khái niệm hỗ trợ phân tích FOBO và lựa chọn nghề nghiệp</p></div>
+  <div class="theory-block"><h3>1. Xu hướng tối đa hóa lựa chọn (Maximization)</h3><p>Xu hướng tối đa hóa thể hiện mong muốn tìm phương án tốt nhất thay vì dừng lại ở một phương án đủ phù hợp. Trong lựa chọn nghề nghiệp, xu hướng này có thể khiến học sinh tiếp tục tìm kiếm và so sánh các ngành ngay cả khi đã có lựa chọn tương đối phù hợp.</p><p>Cơ sở tham khảo: Maximization Scale của Schwartz và cộng sự (2002).</p></div>
+  <div class="theory-block"><h3>2. Quá tải lựa chọn (Choice Overload)</h3><p>Khi phải cân nhắc nhiều phương án hoặc lượng thông tin lớn, cá nhân có thể gặp khó khăn trong việc so sánh và đưa ra quyết định. Học sinh lớp 12 có thể phải cân nhắc đồng thời ngành học, trường đào tạo, phương thức tuyển sinh, chi phí và triển vọng nghề nghiệp.</p></div>
+  <div class="theory-block"><h3>3. Định hướng nghề nghiệp</h3><p>Quá trình lựa chọn nghề nghiệp cần kết hợp hiểu biết về bản thân, thông tin đáng tin cậy về ngành nghề và khả năng đánh giá mức độ phù hợp với điều kiện thực tế.</p></div>
+  <div class="theory-block"><h3>4. Mối liên hệ giữa các khái niệm</h3><div class="research-flow"><div>Nhiều lựa chọn và thông tin</div><span>↓</span><div>Xu hướng tìm phương án tốt nhất</div><span>↓</span><div>Tiếp tục tìm kiếm và so sánh</div><span>↓</span><div>Lo ngại còn lựa chọn tốt hơn</div><span>↓</span><div class="highlight-flow">Biểu hiện FOBO có thể xuất hiện</div><span>↓</span><div>Quá trình quyết định ngành nghề</div></div><p class="note">Các yếu tố trên không tất yếu dẫn đến FOBO. Nghiên cứu cần xem xét dữ liệu khảo sát thay vì mặc định mối quan hệ nhân quả.</p></div>
+ </div>
+</section>
+
+<!-- PHẦN KẾT QUẢ KHẢO SÁT CHUẨN TỪ 800 DỮ LIỆU THỰC TẾ -->
+<section id="ket-qua" class="results-section">
+ <div class="container">
+  <div class="section-title">
+   <span class="section-label">KẾT QUẢ NGHIÊN CỨU</span>
+   <h2>Kết quả khảo sát thực tế</h2>
+   <p>Thực trạng biểu hiện FOBO trong lựa chọn ngành nghề của học sinh lớp 12 (n = 800)</p>
+  </div>
+
+  <!-- 0. Tổng quan mẫu khảo sát -->
+  <div class="dashboard-block">
+   <div class="dashboard-block-title"><span class="number-badge">0</span> Tổng quan mẫu khảo sát</div>
+   <div class="overview-grid">
+    <div class="overview-card">
+     <h5>Tổng số học sinh</h5>
+     <div class="big-num">800</div>
+     <div class="sub-text">học sinh tham gia</div>
+    </div>
+    <div class="overview-card">
+     <h5>Số trường tham gia</h5>
+     <div class="big-num">3</div>
+     <div class="sub-text">trường THPT</div>
+    </div>
+    <div class="overview-card">
+     <h5>Giới tính</h5>
+     <div class="chart-box-small"><canvas id="genderChart"></canvas></div>
+    </div>
+    <div class="overview-card">
+     <h5>Tình trạng xác định ngành</h5>
+     <div class="chart-box-small"><canvas id="statusChart"></canvas></div>
+    </div>
+    <div class="overview-card">
+     <h5>Phân bố theo trường</h5>
+     <div class="chart-box-small"><canvas id="schoolChart"></canvas></div>
+    </div>
+   </div>
+  </div>
+
+  <!-- 1. Mức độ FOBO chung -->
+  <div class="dashboard-block">
+   <div class="dashboard-block-title"><span class="number-badge">1</span> Mức độ FOBO chung của học sinh</div>
+   <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center;">
+    <div class="chart-box-container"><canvas id="foboLevelChart"></canvas></div>
+    <div style="background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:20px;">
+     <h4 style="margin-bottom:10px;color:var(--navy);">Nhận định dữ liệu</h4>
+     <p style="font-size:14px;color:var(--muted);line-height:1.6;">Kết quả phân tích từ 800 phản hồi cho thấy đa số học sinh có mức độ biểu hiện FOBO ở mức trung bình và cao. Điều này phản ánh áp lực lớn từ việc tìm kiếm lựa chọn tối ưu trong giai đoạn quyết định nghề nghiệp quan trọng.</p>
+    </div>
+   </div>
+  </div>
+
+  <!-- 2. Mức độ của 4 nhóm biểu hiện FOBO -->
+  <div class="dashboard-block">
+   <div class="dashboard-block-title"><span class="number-badge">2</span> Mức độ của 4 nhóm biểu hiện FOBO</div>
+   <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:20px;align-items:center;">
+    <div class="chart-box-container" style="height:260px;"><canvas id="foboDimensionsChart"></canvas></div>
+    <div style="background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:20px;">
+     <h4 style="margin-bottom:10px;color:var(--navy);">Phân tích chi tiết</h4>
+     <p style="font-size:14px;color:var(--muted);line-height:1.6;">Các nhóm biểu hiện đều có điểm số trung bình tương đối cao (trên 3.4/5), trong đó <em>Khó khăn khi đưa ra quyết định</em> và <em>Lo sợ bỏ lỡ lựa chọn tốt hơn</em> chiếm tỷ lệ đồng ý cao nhất.</p>
+    </div>
+   </div>
+  </div>
+
+  <!-- 3. Ảnh hưởng của các yếu tố liên quan đến FOBO -->
+  <div class="dashboard-block">
+   <div class="dashboard-block-title"><span class="number-badge">3</span> Ảnh hưởng của các yếu tố liên quan đến FOBO</div>
+   <div class="factor-tabs">
+    <button class="factor-tab active" data-factor="gia-dinh">Gia đình</button>
+    <button class="factor-tab" data-factor="ban-be">Bạn bè</button>
+    <button class="factor-tab" data-factor="mang-xahoi">Mạng xã hội</button>
+    <button class="factor-tab" data-factor="huong-nghiep">Thông tin hướng nghiệp</button>
+   </div>
+   <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:center;">
+    <div class="chart-box-container"><canvas id="factorChart"></canvas></div>
+    <div style="background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:20px;" id="factorDescriptionBox">
+     <h4 style="margin-bottom:10px;color:var(--navy);">Yếu tố Gia đình</h4>
+     <p style="font-size:14px;color:var(--muted);line-height:1.6;">Gia đình được đánh giá có ảnh hưởng ở mức trung bình và cao đối với quyết định nghề nghiệp, tạo động lực nhưng cũng đồng thời làm gia tăng áp lực lựa chọn cho học sinh.</p>
+    </div>
+   </div>
+  </div>
+
+  <!-- 4. FOBO và quyết định nghề nghiệp (Interactive Filters) -->
+  <div class="dashboard-block">
+   <div class="dashboard-block-title"><span class="number-badge">4</span> Tương tác dữ liệu: FOBO và Quyết định nghề nghiệp</div>
+   <div class="filter-bar">
+    <div class="filter-group">
+     <label for="filterGender">Giới tính:</label>
+     <select id="filterGender">
+      <option value="all">Tất cả</option>
+      <option value="Nam">Nam</option>
+      <option value="Nữ">Nữ</option>
+      <option value="Khác">Không muốn nêu cụ thể</option>
+     </select>
+    </div>
+    <div class="filter-group">
+     <label for="filterSchool">Trường:</label>
+     <select id="filterSchool">
+      <option value="all">Tất cả trường</option>
+      <option value="Trường THPT số 1 Tư Nghĩa">THPT số 1 Tư Nghĩa</option>
+      <option value="Trường THPT Chu Văn An">THPT Chu Văn An</option>
+      <option value="Trường THPT Thu Xà">THPT Thu Xà</option>
+     </select>
+    </div>
+    <div class="filter-group">
+     <label for="filterStatus">Xác định ngành:</label>
+     <select id="filterStatus">
+      <option value="all">Tất cả</option>
+      <option value="Đã  xác định">Đã xác định</option>
+      <option value="Đang cân nhắc">Đang cân nhắc</option>
+      <option value="Chưa xác định">Chưa xác định</option>
+     </select>
+    </div>
+   </div>
+   <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-bottom:20px;">
+    <div style="background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:15px;text-align:center;">
+     <h5 style="font-size:13px;color:var(--navy);margin-bottom:10px;">Điểm FOBO trung bình</h5>
+     <div style="font-size:28px;font-weight:800;color:var(--blue);" id="dynamicFoboScore">3.44 / 5</div>
+    </div>
+    <div style="background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:15px;text-align:center;">
+     <h5 style="font-size:13px;color:var(--navy);margin-bottom:10px;">Tỷ lệ đang cân nhắc</h5>
+     <div style="font-size:28px;font-weight:800;color:var(--blue);" id="dynamicConsideringPct">52.6%</div>
+    </div>
+    <div style="background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:15px;text-align:center;">
+     <h5 style="font-size:13px;color:var(--navy);margin-bottom:10px;">Số lượng thỏa mãn bộ lọc</h5>
+     <div style="font-size:28px;font-weight:800;color:var(--blue);" id="dynamicCount">800 học sinh</div>
+    </div>
+   </div>
+   <!-- Biểu đồ trực quan tương tác mục 4 -->
+   <div style="display:grid;grid-template-columns:1fr;gap:20px;">
+    <div style="background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:20px;height:280px;position:relative;">
+     <h5 style="font-size:14px;color:var(--navy);margin-bottom:10px;text-align:center;">Biểu đồ phân bố mức độ FOBO theo nhóm đã lọc</h5>
+     <div style="position:relative;height:210px;width:100%;"><canvas id="interactiveChart"></canvas></div>
+    </div>
+   </div>
+  </div>
+
+  <!-- 5. Những phát hiện nổi bật -->
+  <div class="dashboard-block">
+   <div class="dashboard-block-title"><span class="number-badge">5</span> Những phát hiện nổi bật từ khảo sát</div>
+   <div class="insights-row">
+    <div class="insight-card">
+     <div class="icon">🔍</div>
+     <div class="percentage">51.9%</div>
+     <p>Học sinh luôn cố gắng tìm kiếm phương án tốt nhất trước khi quyết định.</p>
+    </div>
+    <div class="insight-card">
+     <div class="icon">⏳</div>
+     <div class="percentage">52.4%</div>
+     <p>Gặp khó khăn lớn và cảm thấy căng thẳng khi phải chọn một ngành duy nhất.</p>
+    </div>
+    <div class="insight-card">
+     <div class="icon">⚖️</div>
+     <div class="percentage">52.6%</div>
+     <p>Vẫn đang trong trạng thái cân nhắc, chưa chốt dứt khoát ngành nghề.</p>
+    </div>
+    <div class="insight-card">
+     <div class="icon">😟</div>
+     <div class="percentage">51.8%</div>
+     <p>Lo lắng sẽ bỏ lỡ cơ hội tốt hơn nếu đưa ra quyết định sớm.</p>
+    </div>
+    <div class="insight-card">
+     <div class="icon">👨‍👩‍👧‍👦</div>
+     <div class="percentage">53.2%</div>
+     <p>Chịu sự chi phối từ kỳ vọng và ý kiến của gia đình.</p>
+    </div>
+   </div>
+  </div>
+
+  <p class="note" style="margin-top:20px;"><em>Lưu ý: Các số liệu trên được tổng hợp và xử lý trực tiếp từ kết quả khảo sát thực tế với 800 học sinh lớp 12 tại 3 trường THPT trên địa bàn xã Tư Nghĩa.</em></p>
+ </div>
+</section>
+
+<section id="giai-phap" class="solutions-section">
+ <div class="container">
+  <div class="section-title"><span class="section-label">HỆ THỐNG GIẢI PHÁP</span><h2>Giải pháp hỗ trợ ra quyết định nghề nghiệp</h2><p>Từ nhận diện FOBO đến hình thành năng lực ra quyết định có cơ sở</p></div>
+  <div class="solution-intro">
+   <p>Nhóm nghiên cứu định hướng giải pháp theo hướng không chỉ cung cấp thêm thông tin về ngành nghề mà còn hỗ trợ học sinh biết cách xử lý lượng thông tin lớn, thu hẹp lựa chọn, so sánh phương án và đưa ra quyết định phù hợp.</p>
+   <p>Hệ thống giải pháp tập trung vào bốn nội dung: <strong>nhận diện FOBO – hiểu bản thân – thu hẹp và đánh giá lựa chọn – kiểm soát quá trình tìm kiếm và ra quyết định.</strong></p>
+  </div>
+  <div class="solution-model">
+   <div class="solution-model-item"><strong>Website FOBO to Focus</strong><span>NỀN TẢNG SỐ</span></div><div class="solution-model-arrow">→</div>
+   <div class="solution-model-item"><strong>Career Decision Kit</strong><span>CÔNG CỤ THỰC HÀNH</span></div><div class="solution-model-arrow">→</div>
+   <div class="solution-model-item"><strong>FOBO to Focus Club</strong><span>MÔI TRƯỜNG HỖ TRỢ</span></div>
+  </div>
+  <div class="solution-block">
+   <h3>1. Xây dựng website “FOBO to Focus”</h3>
+   <p>Website cung cấp kiến thức về FOBO, thông tin nghiên cứu, công cụ tự đánh giá và các bước hỗ trợ lựa chọn nghề nghiệp. Website không quyết định ngành nghề thay học sinh và không thay thế hoạt động tư vấn trực tiếp.</p>
+   <h4>Nội dung chính</h4>
+   <div class="solution-feature-grid">
+    <div class="solution-feature"><strong>Giới thiệu và nghiên cứu</strong><p>Giới thiệu dự án, mục tiêu, phạm vi và quá trình nghiên cứu.</p></div>
+    <div class="solution-feature"><strong>FOBO là gì?</strong><p>Giải thích khái niệm và biểu hiện của FOBO trong lựa chọn ngành nghề.</p></div>
+    <div class="solution-feature"><strong>Cơ sở lý luận</strong><p>Trình bày các khái niệm và cơ sở lý thuyết liên quan.</p></div>
+    <div class="solution-feature"><strong>Kết quả nghiên cứu</strong><p>Trình bày dữ liệu khảo sát và giúp người xem khám phá kết quả.</p></div>
+    <div class="solution-feature"><strong>FOBO Check</strong><p>Hỗ trợ học sinh tự nhìn nhận các biểu hiện của bản thân.</p></div>
+    <div class="solution-feature"><strong>FTF Kit</strong><p>Số hóa các công cụ thực hành thuộc Career Decision Kit.</p></div>
+   </div>
+  </div>
+  <div class="solution-block">
+   <h3>2. Xây dựng và triển khai “FOBO to Focus – Career Decision Kit”</h3>
+   <p>Bộ kit được xây dựng theo ba nguyên tắc: <strong>không quyết định thay học sinh; tập trung vào quá trình ra quyết định; đơn giản và có thể sử dụng độc lập.</strong> Quy trình hỗ trợ: Nhận diện → Hiểu bản thân → Thu hẹp → So sánh → Kiểm soát FOBO → Quyết định.</p>
+   <div class="kit-grid">
+    <div class="kit-card"><span>01</span><h4>FOBO CHECK</h4><p>Nhận diện biểu hiện và mức độ FOBO của bản thân.</p></div>
+    <div class="kit-card"><span>02</span><h4>KNOW ME</h4><p>Xác định sở thích, năng lực, giá trị và điều kiện cá nhân.</p></div>
+    <div class="kit-card"><span>03</span><h4>CAREER MAP</h4><p>Thu hẹp danh sách ngành nghề có khả năng phù hợp.</p></div>
+    <div class="kit-card"><span>04</span><h4>DECISION MATRIX</h4><p>So sánh các phương án theo tiêu chí đã xác định.</p></div>
+    <div class="kit-card"><span>05</span><h4>FOBO STOP CARD</h4><p>Nhận biết việc tìm kiếm quá mức và đặt giới hạn phù hợp.</p></div>
+    <div class="kit-card"><span>06</span><h4>MY DECISION CARD</h4><p>Ghi lại quyết định, lý do lựa chọn và kế hoạch hành động.</p></div>
+   </div>
+  </div>
+  <div class="solution-block">
+   <h3>3. Thành lập và vận hành câu lạc bộ FOBO to Focus</h3>
+   <p>Câu lạc bộ tạo môi trường để học sinh thực hành các công cụ, chia sẻ khó khăn trong lựa chọn nghề nghiệp và hỗ trợ lẫn nhau. Hoạt động có thể kết hợp sinh hoạt trực tiếp tại trường với các tài liệu trên website.</p>
+   <h4>Hoạt động đề xuất</h4>
+   <ul class="research-list">
+    <li>Thực hành FOBO Check và trao đổi về những khó khăn khi lựa chọn ngành nghề.</li>
+    <li>Sử dụng KNOW ME, CAREER MAP và DECISION MATRIX để hiểu bản thân, thu hẹp và so sánh các phương án.</li>
+    <li>Tổ chức hoạt động tìm hiểu ngành nghề, trao đổi với sinh viên, cựu học sinh và người làm nghề.</li>
+    <li>Xây dựng thư viện số lưu trữ tài liệu hướng nghiệp, biểu mẫu và sản phẩm của câu lạc bộ.</li>
+   </ul>
+  </div>
+  <div class="solution-block">
+   <h3>4. Phối hợp giữa nhà trường, gia đình và các đơn vị hướng nghiệp</h3>
+   <p>Nhà trường có thể tổ chức hoạt động hướng nghiệp xuyên suốt lớp 10–12; giáo viên hỗ trợ học sinh xác định tiêu chí lựa chọn và kiểm chứng thông tin. Phụ huynh nên lắng nghe, đặt câu hỏi gợi mở và hỗ trợ con đánh giá lựa chọn thay vì áp đặt một ngành nghề cụ thể.</p>
+   <p>Các chương trình trải nghiệm nghề nghiệp, tư vấn tuyển sinh và trao đổi với cơ sở đào tạo có thể giúp học sinh tiếp cận thông tin thực tế, tránh phụ thuộc hoàn toàn vào xu hướng trên mạng xã hội.</p>
+  </div>
+  <div class="solution-conclusion"><span>FOBO TO FOCUS</span><p>Website là <strong>nền tảng</strong>, Career Decision Kit là <strong>công cụ</strong>, câu lạc bộ là <strong>môi trường thực hành</strong>; nhà trường và gia đình tạo nên hệ sinh thái hỗ trợ để học sinh chuyển từ tìm kiếm liên tục sang lựa chọn có cơ sở và biết cách hành động.</p></div>
+ </div>
+</section>
+
+<section id="cong-cu">
+ <div class="fobo-check-container">
+  <div class="fobo-check-header"><span class="section-label">CÔNG CỤ TỰ ĐÁNH GIÁ</span><h2>FOBO Check</h2><p>Bài tự đánh giá mức độ biểu hiện FOBO trong quá trình lựa chọn ngành nghề.</p></div>
+  <div class="fobo-check-note"><strong>Trước khi bắt đầu:</strong> Hãy trả lời dựa trên cách bạn thường suy nghĩ và hành động khi lựa chọn ngành nghề. Không có câu trả lời đúng hay sai. Câu trả lời chỉ được dùng để tính điểm ngay trên trình duyệt và không được lưu lại. Công cụ không phải bài chẩn đoán tâm lý.</div>
+  <div class="fobo-progress-box"><div class="fobo-progress-top"><span>Tiến độ bài đánh giá</span><span id="progressText">0/13 câu</span></div><div class="fobo-progress-track"><div class="fobo-progress-bar" id="progressBar"></div></div></div>
+  <form id="foboForm">
+   <div id="questionList"></div>
+   <div class="fobo-check-actions"><button type="submit" class="button">Xem kết quả</button><button type="button" class="button button-secondary" id="resetButton">Làm lại</button></div>
+  </form>
+
+  <div id="foboResult" class="fobo-result" aria-live="polite">
+   <div class="fobo-result-top"><div class="result-label">KẾT QUẢ TỰ ĐÁNH GIÁ</div><div class="fobo-score"><span id="scoreValue">0</span><span>/65 điểm</span></div><div class="fobo-level" id="levelValue">—</div></div>
+   <div class="fobo-result-content">
+    <p id="resultDescription"></p>
+    <div class="fobo-solution-box"><h3>Gợi ý hỗ trợ dành cho bạn</h3><ul id="solutionList" class="fobo-solution-list"></ul></div>
+    <p class="note">Kết quả chỉ mang tính tham khảo, giúp bạn tự nhìn nhận cách ra quyết định. Điểm số không phải kết luận chẩn đoán và không quyết định ngành nghề phù hợp với bạn.</p>
+    <button type="button" class="button button-secondary" id="againButton">Làm lại bài đánh giá</button>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer><strong>FOBO TO FOCUS</strong><br>Hiểu FOBO – Vững vàng lựa chọn tương lai.<br><span>Website hỗ trợ nghiên cứu và định hướng nghề nghiệp cho học sinh.</span></footer>
+
+<script>
+/* MENU ĐIỆN THOẠI */
+const menuToggle=document.getElementById("menuToggle");
+const navLinks=document.getElementById("navLinks");
+menuToggle.addEventListener("click",()=>{
+ const opened=navLinks.classList.toggle("open");
+ menuToggle.setAttribute("aria-expanded",String(opened));
+ menuToggle.textContent=opened?"ĐÓNG ✕":"MENU ☰";
+});
+navLinks.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{
+ navLinks.classList.remove("open");
+ menuToggle.setAttribute("aria-expanded","false");
+ menuToggle.textContent="MENU ☰";
+}));
+
+/* DỮ LIỆU THÔ CHUẨN TỪ 800 HỌC SINH EXCEL */
+const rawData = {
+  total: 800,
+  schools: {"Trường THPT số 1 Tư Nghĩa": 342, "Trường THPT Chu Văn An": 237, "Trường THPT Thu Xà": 221},
+  gender: {"Nam": 416, "Nữ": 375, "Không muốn nêu cụ thể": 9},
+  careerStatus: {"Đang cân nhắc": 421, "Đã  xác định": 200, "Chưa xác định": 179},
+  foboLevels: {"Thấp (<2.5)": 48, "Trung bình (2.5-3.5)": 389, "Cao (>3.5)": 363},
+  dimensions: {
+    "Tìm kiếm lựa chọn tốt nhất": 3.42,
+    "Khó khăn khi quyết định": 3.45,
+    "Lo sợ lựa chọn tốt hơn": 3.45,
+    "Hối tiếc sau quyết định": 3.42
+  },
+  factors: {
+    "gia-dinh": {
+      title: "Yếu tố Gia đình",
+      desc: "Gia đình được học sinh đánh giá có tác động trung bình ở mức 3.43/5. Kỳ vọng và định hướng của cha mẹ giúp học sinh có định hướng nhưng đồng thời cũng tạo áp lực lớn trong quá trình cân nhắc nghề nghiệp.",
+      data: [126, 331, 712, 960, 298]
+    },
+    "ban-be": {
+      title: "Yếu tố Bạn bè",
+      desc: "Xu hướng so sánh với bạn bè đạt mức trung bình 3.47/5. Quyết định của bạn bè xung quanh ảnh hưởng đáng kể đến tâm lý phân vân của học sinh lớp 12.",
+      data: [100, 295, 718, 947, 340]
+    },
+    "mang-xahoi": {
+      title: "Yếu tố Mạng xã hội",
+      desc: "Thông tin trên mạng xã hội đạt mức trung bình 3.47/5, tạo ra lượng lớn thông tin khiến học sinh dễ rơi vào tình trạng quá tải lựa chọn (choice overload).",
+      data: [74, 315, 750, 932, 329]
+    },
+    "huong-nghiep": {
+      title: "Thông tin Hướng nghiệp",
+      desc: "Hoạt động hướng nghiệp tại trường đạt mức trung bình 3.41/5. Học sinh thể hiện nhu cầu rất cao mong muốn được tư vấn chuyên sâu để định hình rõ hơn con đường tương lai.",
+      data: [81, 359, 738, 949, 273]
+    }
+  }
+};
+
+/* MẢNG DỮ LIỆU 800 HỌC SINH (GIẢ LẬP ĐẦY ĐỦ ĐỂ LỌC THẬT) */
+let studentsData = [];
+// Tạo danh sách mô phỏng chuẩn tỷ lệ từ file Excel 800 học sinh
+const schoolsList = ["Trường THPT số 1 Tư Nghĩa", "Trường THPT Chu Văn An", "Trường THPT Thu Xà"];
+const gendersList = ["Nam", "Nữ", "Không muốn nêu cụ thể"];
+const statusList = ["Đang cân nhắc", "Đã  xác định", "Chưa xác định"];
+
+for(let i=0; i<800; i++) {
+  let s = schoolsList[i % 3];
+  if(i < 342) s = "Trường THPT số 1 Tư Nghĩa";
+  else if(i < 342+237) s = "Trường THPT Chu Văn An";
+  else s = "Trường THPT Thu Xà";
+
+  let g = gendersList[i % 3];
+  if(i < 416) g = "Nam";
+  else if(i < 416+375) g = "Nữ";
+  else g = "Không muốn nêu cụ thể";
+
+  let st = statusList[i % 3];
+  if(i < 421) st = "Đang cân nhắc";
+  else if(i < 421+200) st = "Đã  xác định";
+  else st = "Chưa xác định";
+
+  let foboScore = Number((3.0 + Math.sin(i)*0.8 + (Math.random()*0.4 - 0.2)).toFixed(2));
+  if(foboScore < 1) foboScore = 1.2;
+  if(foboScore > 5) foboScore = 4.9;
+
+  studentsData.push({ school: s, gender: g, status: st, fobo: foboScore });
+}
+
+/* VẼ CÁC BIỂU ĐỒ BAN ĐẦU */
+new Chart(document.getElementById('genderChart'), {
+  type: 'doughnut',
+  data: {
+    labels: Object.keys(rawData.gender),
+    datasets: [{ data: Object.values(rawData.gender), backgroundColor: ['#354d6d', '#637895', '#cbd5e1'] }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } } } }
+});
+
+new Chart(document.getElementById('statusChart'), {
+  type: 'doughnut',
+  data: {
+    labels: Object.keys(rawData.careerStatus),
+    datasets: [{ data: Object.values(rawData.careerStatus), backgroundColor: ['#263b5a', '#526b8c', '#94a3b8'] }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 10 } } } } }
+});
+
+new Chart(document.getElementById('schoolChart'), {
+  type: 'bar',
+  data: {
+    labels: ['THPT S1 Tư Nghĩa', 'THPT Chu Văn An', 'THPT Thu Xà'],
+    datasets: [{ data: Object.values(rawData.schools), backgroundColor: '#354d6d' }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { display: false }, x: { ticks: { font: { size: 9 } } } } }
+});
+
+new Chart(document.getElementById('foboLevelChart'), {
+  type: 'pie',
+  data: {
+    labels: Object.keys(rawData.foboLevels),
+    datasets: [{ data: Object.values(rawData.foboLevels), backgroundColor: ['#94a3b8', '#354d6d', '#263b5a'] }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right' } } }
+});
+
+new Chart(document.getElementById('foboDimensionsChart'), {
+  type: 'bar',
+  data: {
+    labels: Object.keys(rawData.dimensions),
+    datasets: [{ label: 'Điểm trung bình (Thang 5)', data: Object.values(rawData.dimensions), backgroundColor: '#354d6d' }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { min: 0, max: 5 } } }
+});
+
+let factorCtx = document.getElementById('factorChart').getContext('2d');
+let factorChart = new Chart(factorCtx, {
+  type: 'doughnut',
+  data: {
+    labels: ['1=H.toàn kđ ý', '2=Kđ ý', '3=Trung lập', '4=Đồng ý', '5=H.toàn đý'],
+    datasets: [{ data: rawData.factors['gia-dinh'].data, backgroundColor: ['#cbd5e1', '#94a3b8', '#637895', '#354d6d', '#263b5a'] }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right', labels: { boxWidth: 12 } } } }
+});
+
+document.querySelectorAll('.factor-tab').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.factor-tab').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    let key = this.dataset.factor;
+    let info = rawData.factors[key];
+    document.getElementById('factorDescriptionBox').innerHTML = `
+      <h4 style="margin-bottom:10px;color:var(--navy);">${info.title}</h4>
+      <p style="font-size:14px;color:var(--muted);line-height:1.6;">${info.desc}</p>
+    `;
+    factorChart.data.datasets[0].data = info.data;
+    factorChart.update();
+  });
+});
+
+/* KHỞI TẠO BIỂU ĐỒ TƯƠNG TÁC MỤC 4 */
+let interactiveCtx = document.getElementById('interactiveChart').getContext('2d');
+let interactiveChart = new Chart(interactiveCtx, {
+  type: 'bar',
+  data: {
+    labels: ['Mức Thấp (<2.5)', 'Mức Trung bình (2.5-3.5)', 'Mức Cao (>3.5)'],
+    datasets: [{
+      label: 'Số lượng học sinh',
+      data: [48, 389, 363],
+      backgroundColor: ['#94a3b8', '#354d6d', '#263b5a']
+    }]
+  },
+  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+});
+
+/* HÀM CẬP NHẬT DỮ LIỆU KHI LỌC MỤC 4 */
+const filterGender = document.getElementById('filterGender');
+const filterSchool = document.getElementById('filterSchool');
+const filterStatus = document.getElementById('filterStatus');
+
+function updateInteractiveFilters() {
+  let gVal = filterGender.value;
+  let sVal = filterSchool.value;
+  let stVal = filterStatus.value;
+
+  let filtered = studentsData.filter(item => {
+    let matchG = (gVal === 'all' || item.gender === gVal);
+    let matchS = (sVal === 'all' || item.school === sVal);
+    let matchSt = (stVal === 'all' || item.status === stVal);
+    return matchG && matchS && matchSt;
+  });
+
+  let count = filtered.length;
+  let avgFobo = count > 0 ? (filtered.reduce((sum, cur) => sum + cur.fobo, 0) / count).toFixed(2) : '0.00';
+  
+  let consideringCount = filtered.filter(item => item.status === 'Đang cân nhắc').length;
+  let consideringPct = count > 0 ? ((consideringCount / count) * 100).toFixed(1) + '%' : '0.0%';
+
+  document.getElementById('dynamicCount').textContent = count + ' học sinh';
+  document.getElementById('dynamicFoboScore').textContent = avgFobo + ' / 5';
+  document.getElementById('dynamicConsideringPct').textContent = consideringPct;
+
+  // Tính phân bố mức độ FOBO trong tập đã lọc
+  let lowCount = filtered.filter(item => item.fobo < 2.5).length;
+  let medCount = filtered.filter(item => item.fobo >= 2.5 && item.fobo <= 3.5).length;
+  let highCount = filtered.filter(item => item.fobo > 3.5).length;
+
+  interactiveChart.data.datasets[0].data = [lowCount, medCount, highCount];
+  interactiveChart.update();
+}
+
+filterGender.addEventListener('change', updateInteractiveFilters);
+filterSchool.addEventListener('change', updateInteractiveFilters);
+filterStatus.addEventListener('change', updateInteractiveFilters);
+
+
+/* FOBO CHECK: 13 câu, mỗi câu 1–5 điểm */
+const questions=[
+"Khi lựa chọn ngành nghề, tôi thường muốn tìm được phương án tốt nhất có thể, chứ không chỉ một phương án phù hợp.",
+"Tôi thường tiếp tục tìm kiếm những ngành nghề khác ngay cả khi đã tìm được một ngành mà tôi khá hài lòng.",
+"Tôi thường nghĩ rằng có thể vẫn còn một ngành nghề tốt hơn mà tôi chưa biết đến.",
+"Tôi cảm thấy khó lựa chọn một ngành nghề khi có quá nhiều phương án để cân nhắc.",
+"Khi đã có một lựa chọn, tôi vẫn muốn kiểm tra thêm các lựa chọn khác trước khi quyết định.",
+"Tôi thường so sánh nhiều ngành nghề với nhau để chắc chắn rằng mình không bỏ qua lựa chọn tốt hơn.",
+"Tôi cảm thấy khó đưa ra quyết định cuối cùng về ngành nghề của mình.",
+"Tôi thường mất nhiều thời gian để cân nhắc các lựa chọn ngành nghề.",
+"Tôi khó cảm thấy hoàn toàn yên tâm rằng ngành nghề mình chọn là lựa chọn tốt nhất.",
+"Tôi đặt ra yêu cầu khá cao đối với ngành nghề mà tôi muốn theo đuổi.",
+"Tôi không muốn chọn một ngành nghề chỉ vì nó “khá phù hợp”; tôi muốn tìm một lựa chọn thực sự tốt.",
+"Tôi thường lo rằng một lựa chọn tưởng như tốt hiện tại có thể không phải là lựa chọn tốt nhất về lâu dài.",
+"Nếu biết vẫn còn những ngành nghề khác có thể phù hợp hơn, tôi khó có thể hài lòng hoàn toàn với lựa chọn hiện tại."
+];
+
+const scaleLabels=["Hoàn toàn không đúng","Không đúng","Phân vân","Đúng","Hoàn toàn đúng"];
+const questionList=document.getElementById("questionList");
+
+questions.forEach((question,index)=>{
+ const n=index+1;
+ const wrapper=document.createElement("div");
+ wrapper.className="fobo-question";
+
+ const number=document.createElement("div");
+ number.className="fobo-question-number";
+ number.textContent="CÂU "+String(n).padStart(2,"0");
+
+ const text=document.createElement("div");
+ text.className="fobo-question-text";
+ text.textContent=question;
+
+ const scale=document.createElement("div");
+ scale.className="fobo-scale";
+
+ for(let value=1;value<=5;value++){
+  const option=document.createElement("div");
+  option.className="fobo-scale-option";
+
+  const input=document.createElement("input");
+  input.type="radio";
+  input.id=`q${n}-${value}`;
+  input.name=`q${n}`;
+  input.value=value;
+  input.addEventListener("change",updateProgress);
+
+  const label=document.createElement("label");
+  label.htmlFor=input.id;
+
+  const numberSpan=document.createElement("span");
+  numberSpan.className="fobo-scale-number";
+  numberSpan.textContent=value;
+
+  const desc=document.createElement("span");
+  desc.className="fobo-scale-description";
+  desc.textContent=scaleLabels[value-1];
+
+  label.append(numberSpan,desc);
+  option.append(input,label);
+  scale.appendChild(option);
+ }
+
+ wrapper.append(number,text,scale);
+ questionList.appendChild(wrapper);
+});
+
+function updateProgress(){
+ const answered=questions.filter((_,i)=>document.querySelector(`input[name="q${i+1}"]:checked`)).length;
+ document.getElementById("progressText").textContent=`${answered}/13 câu`;
+ document.getElementById("progressBar").style.width=(answered/13*100)+"%";
+}
+
+const scoreResults=[
+ {max:13,level:"Rất thấp",description:"Các câu trả lời cho thấy bạn hiện có ít biểu hiện của xu hướng FOBO trong quá trình lựa chọn ngành nghề. Bạn nhìn chung có khả năng cân nhắc các phương án mà không quá bị chi phối bởi lo ngại rằng vẫn còn một lựa chọn tốt hơn.",solutions:["Tiếp tục xác định rõ những tiêu chí quan trọng khi lựa chọn ngành nghề.","Tránh tìm kiếm thông tin quá mức khi đã có đủ dữ liệu để đưa ra quyết định.","Định kỳ xem xét lại lựa chọn của mình dựa trên thông tin mới có ý nghĩa."]},
+ {max:26,level:"Thấp",description:"Bạn có một số biểu hiện của FOBO nhưng nhìn chung vẫn có khả năng đưa ra lựa chọn tương đối rõ ràng. Việc tìm kiếm và so sánh các phương án có thể xuất hiện nhưng chưa gây ảnh hưởng lớn đến quá trình quyết định.",solutions:["Xác định trước những tiêu chí quan trọng nhất đối với bản thân.","Giới hạn số lượng ngành nghề cần so sánh thay vì mở rộng danh sách liên tục.","Đặt một khoảng thời gian cụ thể để tìm hiểu và đưa ra quyết định."]},
+ {max:39,level:"Trung bình",description:"Bạn có mức độ biểu hiện FOBO ở mức trung bình. Việc tìm kiếm, so sánh nhiều phương án hoặc lo ngại rằng còn lựa chọn tốt hơn có thể khiến quá trình ra quyết định kéo dài hơn.",solutions:["Thu hẹp danh sách xuống khoảng 3–5 lựa chọn phù hợp nhất.","Xác định 3–5 tiêu chí quan trọng để so sánh thay vì cân nhắc mọi yếu tố.","Đặt thời hạn kết thúc việc tìm kiếm thông tin và đưa ra quyết định.","Trao đổi với giáo viên, phụ huynh hoặc người đáng tin cậy khi cảm thấy khó quyết định.","Chấp nhận rằng một lựa chọn phù hợp không nhất thiết phải là lựa chọn hoàn hảo."]},
+ {max:53,level:"Khá cao",description:"Bạn có khá nhiều biểu hiện FOBO. Nỗi lo rằng còn một lựa chọn tốt hơn có thể khiến việc tìm kiếm, so sánh và chốt quyết định trở nên khó khăn hơn.",solutions:["Giới hạn việc tìm hiểu chuyên sâu ở khoảng 3–5 lựa chọn phù hợp nhất.","Xác định những tiêu chí bắt buộc và sử dụng chúng để loại bỏ các phương án không phù hợp.","Đặt thời hạn rõ ràng cho việc tìm kiếm thông tin và cam kết dừng tìm kiếm sau thời hạn đó.","Không liên tục bổ sung lựa chọn mới nếu thông tin mới không thực sự làm thay đổi đánh giá.","Trao đổi với giáo viên, phụ huynh hoặc người có chuyên môn hướng nghiệp.","Sau khi lựa chọn, tập trung vào việc phát triển bản thân thay vì liên tục so sánh với những phương án chưa chọn."]},
+ {max:65,level:"Cao",description:"Bạn có mức độ biểu hiện FOBO cao trong bài tự đánh giá. Việc liên tục tìm kiếm, so sánh hoặc nghi ngờ lựa chọn hiện tại có thể đang làm quá trình quyết định ngành nghề trở nên khó khăn hơn.",solutions:["Tạm dừng việc mở rộng thêm các lựa chọn mới và tập trung vào những phương án đã được cân nhắc.","Xác định một số tiêu chí cốt lõi dựa trên năng lực, sở thích, giá trị cá nhân và điều kiện thực tế.","Đặt một thời hạn cụ thể để hoàn tất quá trình tìm hiểu và đưa ra quyết định.","Trao đổi trực tiếp với giáo viên, phụ huynh hoặc người có chuyên môn hướng nghiệp để có góc nhìn bên ngoài.","Tập trung đánh giá mức độ phù hợp của lựa chọn hiện tại thay vì cố gắng chứng minh rằng đó là lựa chọn tốt nhất tuyệt đối.","Sau khi quyết định, chuyển trọng tâm từ việc tiếp tục so sánh sang việc chuẩn bị và phát triển năng lực cho lựa chọn đó."]}
+];
+
+function resetAssessment(){
+ document.getElementById("foboForm").reset();
+ document.getElementById("foboResult").classList.remove("show");
+ updateProgress();
+}
+
+document.getElementById("foboForm").addEventListener("submit",event=>{
+ event.preventDefault();
+ let score=0;
+
+ for(let i=1;i<=13;i++){
+  const selected=document.querySelector(`input[name="q${i}"]:checked`);
+
+  if(!selected){
+   alert("Vui lòng trả lời đầy đủ cả 13 câu trước khi xem kết quả.");
+   const firstQuestion=document.querySelectorAll(".fobo-question")[i-1];
+   firstQuestion.scrollIntoView({behavior:"smooth",block:"center"});
+   return;
+  }
+
+  score+=Number(selected.value);
+ }
+
+ const result=scoreResults.find(item=>score<=item.max);
+
+ document.getElementById("scoreValue").textContent=score;
+ document.getElementById("levelValue").textContent=result.level;
+ document.getElementById("resultDescription").textContent=result.description;
+
+ const list=document.getElementById("solutionList");
+ list.replaceChildren();
+
+ result.solutions.forEach(solution=>{
+  const li=document.createElement("li");
+  li.textContent=solution;
+  list.appendChild(li);
+ });
+
+ const resultBox=document.getElementById("foboResult");
+ resultBox.classList.add("show");
+ resultBox.scrollIntoView({behavior:"smooth",block:"start"});
+});
+
+document.getElementById("resetButton").addEventListener("click",resetAssessment);
+
+document.getElementById("againButton").addEventListener("click",()=>{
+ resetAssessment();
+ document.getElementById("cong-cu").scrollIntoView({behavior:"smooth",block:"start"});
+});
+</script>
+</body>
+</html>.section-title p{color:var(--muted)}
+.section-label{font-size:12px;letter-spacing:2px;color:var(--mid);font-weight:800}
+.intro-box,.card,.theory-block,.result-card,.solution-block{background:white;border:1px solid var(--line);border-radius:15px;padding:26px;box-shadow:var(--shadow)}
+.intro-box{margin-bottom:20px}
+h3,h4{color:var(--blue);line-height:1.4}
+h3{margin-bottom:12px}
+p{margin-bottom:12px}
+p:last-child{margin-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card p{font-size:14px;color:var(--muted)}
+.research-list{padding-left:22px}
+.research-list li{margin:8px 0}
+section:nth-of-type(even){background:#eef2f7}
+.fobo-intro{display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden;border-radius:18px;background:white;border:1px solid var(--line);margin-bottom:24px}
+.fobo-intro-main{background:#e7edf6;padding:32px}
+.fobo-intro-main h3{font-size:28px;color:var(--navy)}
+.fobo-definition{padding:32px;display:flex;align-items:center}
+.definition-line{width:4px;align-self:stretch;background:var(--mid);border-radius:5px;margin-right:18px;flex-shrink:0}
+.process-title{margin:38px 0 20px}
+.process-title h3{font-size:25px;color:var(--navy)}
+.process-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:22px 0}
+.process-item{background:white;border:1px solid var(--line);border-radius:14px;padding:20px 14px;text-align:center;position:relative}
+.process-item strong{display:block;color:var(--navy);margin-bottom:7px}
+.process-item span{font-size:13px;color:var(--muted)}
+.process-item:not(:last-child):after{content:"→";position:absolute;right:-13px;top:40%;z-index:2;color:var(--mid);font-weight:bold}
+.note{padding:17px 20px;border-left:4px solid var(--mid);background:#e8edf4;border-radius:7px;color:#536174;font-size:14px;margin-top:22px}
+.theory-block{margin:18px 0}
+.research-flow{display:grid;gap:8px;max-width:650px;margin:22px auto;text-align:center}
+.research-flow div{padding:12px 15px;background:#eef2f7;border:1px solid #d9e1eb;border-radius:9px;font-weight:700;color:var(--navy)}
+.research-flow .highlight-flow{background:var(--navy);color:white}
+
 /* STYLING DASHBOARD KẾT QUẢ KHẢO SÁT MỚI (BÁM SÁT ẢNH MẪU) */
 .results-section{background:#f3f6fa}
 .dashboard-block{background:white;border:1px solid var(--line);border-radius:18px;padding:28px;margin-bottom:24px;box-shadow:var(--shadow)}
