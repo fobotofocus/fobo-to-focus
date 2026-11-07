@@ -282,7 +282,7 @@ section{padding:58px 15px}
   <div class="theory-block"><h3>1. Xu hướng tối đa hóa lựa chọn (Maximization)</h3><p>Xu hướng tối đa hóa thể hiện mong muốn tìm phương án tốt nhất thay vì dừng lại ở một phương án đủ phù hợp. Trong lựa chọn nghề nghiệp, xu hướng này có thể khiến học sinh tiếp tục tìm kiếm và so sánh các ngành ngay cả khi đã có lựa chọn tương đối phù hợp.</p><p>Cơ sở tham khảo: Maximization Scale của Schwartz và cộng sự (2002).</p></div>
   <div class="theory-block"><h3>2. Quá tải lựa chọn (Choice Overload)</h3><p>Khi phải cân nhắc nhiều phương án hoặc lượng thông tin lớn, cá nhân có thể gặp khó khăn trong việc so sánh và đưa ra quyết định. Học sinh lớp 12 có thể phải cân nhắc đồng thời ngành học, trường đào tạo, phương thức tuyển sinh, chi phí và triển vọng nghề nghiệp.</p></div>
   <div class="theory-block"><h3>3. Định hướng nghề nghiệp</h3><p>Quá trình lựa chọn nghề nghiệp cần kết hợp hiểu biết về bản thân, thông tin đáng tin cậy về ngành nghề và khả năng đánh giá mức độ phù hợp với điều kiện thực tế.</p></div>
-  <div class="theory-block"><h3>4. Mối liên hệ giữa các khái niệm</h3><div class="research-flow"><div>Nhiều lựa chọn và thông tin</div><span>↓</span><div>Xu hướng tìm phương án tốt nhất</div><span>↓</span><div>Tiếp tục tìm kiếm và so sánh</div><span>↓</span><div>Lo ngại còn lựa chọn tốt hơn</div><span>↓</span><div class="highlight-flow">Biểu hiện FOBO có thể xuất hiện</div><span>↓</span><div>Quá trình quyết định ngành nghề</div></div><p class="note">Các yếu tố trên không tất yếu dẫn đến FOBO. Nghiên cứu cần xem xét dữ liệu khảo sát thay vì mặc định mối quan hệ nhân quả.</p></div>
+  <div class="theory-block"><h3>4. Mối liên hệ giữa các khái niệm</h3><div class="research-flow"><div>Nhiều lựa chọn và thông tin</div><span>↓</span><div>Xu hướng tìm phương án tốt nhất</div><span>↓</span><div>Tiếp tục tìm kiếm và so sánh</div><span>↓</span><div>Lo ngại còn lựa chọn tốt hơn</div><span>↓</span><div class="highlight-flow">Biểu hiện FOBO có thể xuất hiện</div><span>↓</span><div>Quá trình quyết định nghề nghiệp</div></div><p class="note">Các yếu tố trên không tất yếu dẫn đến FOBO. Nghiên cứu cần xem xét dữ liệu khảo sát thay vì mặc định mối quan hệ nhân quả.</p></div>
  </div>
 </section>
 
@@ -366,7 +366,7 @@ section{padding:58px 15px}
    </div>
   </div>
 
-  <!-- 4. FOBO và quyết định nghề nghiệp (Interactive Filters chuẩn 800 học sinh) -->
+  <!-- 4. FOBO và quyết định nghề nghiệp (Interactive Filters) -->
   <div class="dashboard-block">
    <div class="dashboard-block-title"><span class="number-badge">4</span> Tương tác dữ liệu: FOBO và Quyết định nghề nghiệp</div>
    <div class="filter-bar">
@@ -539,19 +539,25 @@ section{padding:58px 15px}
 <footer><strong>FOBO TO FOCUS</strong><br>Hiểu FOBO – Vững vàng lựa chọn tương lai.<br><span>Website hỗ trợ nghiên cứu và định hướng nghề nghiệp cho học sinh.</span></footer>
 
 <script>
-/* MENU ĐIỆN THOẠI */
-const menuToggle=document.getElementById("menuToggle");
-const navLinks=document.getElementById("navLinks");
-menuToggle.addEventListener("click",()=>{
- const opened=navLinks.classList.toggle("open");
- menuToggle.setAttribute("aria-expanded",String(opened));
- menuToggle.textContent=opened?"ĐÓNG ✕":"MENU ☰";
-});
-navLinks.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{
- navLinks.classList.remove("open");
- menuToggle.setAttribute("aria-expanded","false");
- menuToggle.textContent="MENU ☰";
-}));
+/* MENU ĐIỆN THOẠI HOẠT ĐỘNG MƯỢT MÀ */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    const opened = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(opened));
+    menuToggle.textContent = opened ? "ĐÓNG ✕" : "MENU ☰";
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => 
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "MENU ☰";
+    })
+  );
+}
 
 /* DỮ LIỆU TỔNG QUAN CHUẨN XÁC 800 HỌC SINH TỪ BẢNG */
 const rawData = {
@@ -590,13 +596,8 @@ const rawData = {
   }
 };
 
-/* TẠO MẢNG DỮ LIỆU CHI TIẾT 800 HỌC SINH ĐÚNG THEO BẢNG[cite: 4] */
+/* TẠO MẢNG DỮ LIỆU CHI TIẾT 800 HỌC SINH ĐÚNG THEO BẢNG CHÍNH THỨC */
 let studentsData = [];
-// Phân bổ chính xác theo bảng:
-// Tư Nghĩa 1: 342 học sinh (Chưa xác định: 58, Phân vân: 198, Đã xác định: 86 | Nam: 165, Nữ: 172, Khác: 5)
-// Chu Văn An: 237 học sinh (Chưa xác định: 61, Phân vân: 113, Đã xác định: 63 | Nam: 135, Nữ: 101, Khác: 1)
-// Thu Xà: 221 học sinh (Chưa xác định: 60, Phân vân: 110, Đã xác định: 51 | Nam: 116, Nữ: 102, Khác: 3)
-
 let schoolDetails = [
   {name: "Tư Nghĩa 1", total: 342, un: 58, p: 198, det: 86, m: 165, f: 172, o: 5},
   {name: "Chu Văn An", total: 237, un: 61, p: 113, det: 63, m: 135, f: 101, o: 1},
@@ -620,6 +621,7 @@ schoolDetails.forEach(sch => {
     if(foboScore > 5) foboScore = 4.9;
 
     studentsData.push({ school: sch.name, gender: g, status: st, fobo: foboScore });
+  }
 });
 
 /* VẼ CÁC BIỂU ĐỒ BAN ĐẦU */
@@ -755,14 +757,14 @@ const questions=[
 "Tôi thường nghĩ rằng có thể vẫn còn một ngành nghề tốt hơn mà tôi chưa biết đến.",
 "Tôi cảm thấy khó lựa chọn một ngành nghề khi có quá nhiều phương án để cân nhắc.",
 "Khi đã có một lựa chọn, tôi vẫn muốn kiểm tra thêm các lựa chọn khác trước khi quyết định.",
-"Tôi thường so sánh nhiều ngành nghề với nhau để chắc chắn rằng mình không bỏ qua lựa chọn tốt hơn.",
+"Tôi thường so sánh nhiều ngành nghề với nhau để chắc chắn rằng mình không bỏ qua lựa chọn tốt nhất.",
 "Tôi cảm thấy khó đưa ra quyết định cuối cùng về ngành nghề của mình.",
 "Tôi thường mất nhiều thời gian để cân nhắc các lựa chọn ngành nghề.",
 "Tôi khó cảm thấy hoàn toàn yên tâm rằng ngành nghề mình chọn là lựa chọn tốt nhất.",
 "Tôi đặt ra yêu cầu khá cao đối với ngành nghề mà tôi muốn theo đuổi.",
 "Tôi không muốn chọn một ngành nghề chỉ vì nó “khá phù hợp”; tôi muốn tìm một lựa chọn thực sự tốt.",
 "Tôi thường lo rằng một lựa chọn tưởng như tốt hiện tại có thể không phải là lựa chọn tốt nhất về lâu dài.",
-"Если biết vẫn còn những ngành nghề khác có thể phù hợp hơn, tôi khó có thể hài lòng hoàn toàn với lựa chọn hiện tại."
+"Nếu biết vẫn còn những ngành nghề khác có thể phù hợp hơn, tôi khó có thể hài lòng hoàn toàn với lựa chọn hiện tại."
 ];
 
 const scaleLabels=["Hoàn toàn không đúng","Không đúng","Phân vân","Đúng","Hoàn toàn đúng"];
@@ -861,7 +863,7 @@ document.getElementById("foboForm").addEventListener("submit",event=>{
  const list=document.getElementById("solutionList");
  list.replaceChildren();
 
- result.solutions.solutions.forEach(solution=>{
+ result.solutions.forEach(solution=>{
   const li=document.createElement("li");
   li.textContent=solution;
   list.appendChild(li);
