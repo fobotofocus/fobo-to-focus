@@ -286,7 +286,7 @@ section{padding:58px 15px}
  </div>
 </section>
 
-<!-- PHẦN KẾT QUẢ KHẢO SÁT CHUẨN CHÍNH XÁC THEO BẢNG SỐ LIỆU MỚI (800 HỌC SINH) -->
+<!-- PHẦN KẾT QUẢ KHẢO SÁT CHUẨN XÁC THEO BẢNG SỐ LIỆU MỚI (800 HỌC SINH) -->
 <section id="ket-qua" class="results-section">
  <div class="container">
   <div class="section-title">
@@ -366,7 +366,7 @@ section{padding:58px 15px}
    </div>
   </div>
 
-  <!-- 4. FOBO và quyết định nghề nghiệp (Interactive Filters) -->
+  <!-- 4. FOBO và quyết định nghề nghiệp (Interactive Filters chuẩn xác) -->
   <div class="dashboard-block">
    <div class="dashboard-block-title"><span class="number-badge">4</span> Tương tác dữ liệu: FOBO và Quyết định nghề nghiệp</div>
    <div class="filter-bar">
@@ -596,7 +596,7 @@ const rawData = {
   }
 };
 
-/* TẠO MẢNG DỮ LIỆU CHI TIẾT 800 HỌC SINH ĐÚNG THEO BẢNG CHÍNH THỨC */
+/* TẠO MẢNG DỮ LIỆU CHI TIẾT 800 HỌC SINH ĐÚNG CHUẨN THEO BẢNG CHÍNH THỨC */
 let studentsData = [];
 let schoolDetails = [
   {name: "Tư Nghĩa 1", total: 342, un: 58, p: 198, det: 86, m: 165, f: 172, o: 5},
@@ -710,7 +710,7 @@ let interactiveChart = new Chart(interactiveCtx, {
   options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
 });
 
-/* HÀM CẬP NHẬT DỮ LIỆU KHI LỌC MỤC 4 */
+/* HÀM CẬP NHẬT DỮ LIỆU KHI LỌC MỤC 4 (FIX HOÀN CHỈNH TỶ LỆ & TƯƠNG TÁC) */
 const filterGender = document.getElementById('filterGender');
 const filterSchool = document.getElementById('filterSchool');
 const filterStatus = document.getElementById('filterStatus');
@@ -757,7 +757,7 @@ const questions=[
 "Tôi thường nghĩ rằng có thể vẫn còn một ngành nghề tốt hơn mà tôi chưa biết đến.",
 "Tôi cảm thấy khó lựa chọn một ngành nghề khi có quá nhiều phương án để cân nhắc.",
 "Khi đã có một lựa chọn, tôi vẫn muốn kiểm tra thêm các lựa chọn khác trước khi quyết định.",
-"Tôi thường so sánh nhiều ngành nghề với nhau để chắc chắn rằng mình không bỏ qua lựa chọn tốt nhất.",
+"Tôi thường so sánh nhiều ngành nghề với nhau để chắc chắn rằng mình không bỏ qua lựa chọn tốt hơn.",
 "Tôi cảm thấy khó đưa ra quyết định cuối cùng về ngành nghề của mình.",
 "Tôi thường mất nhiều thời gian để cân nhắc các lựa chọn ngành nghề.",
 "Tôi khó cảm thấy hoàn toàn yên tâm rằng ngành nghề mình chọn là lựa chọn tốt nhất.",
